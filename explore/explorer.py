@@ -1,5 +1,8 @@
 import requests
 import json
+import os
+import time
+import csv
 
 
 ##First connection
@@ -46,7 +49,7 @@ while(state):
     result = results[0]
     #print('result type: {}'.format(type(result)))
     result_keys = result.keys()
-    #print("result keysL: {}".format(result_keys))
+    print("result keys: {}".format(result_keys))
 
     for r in results:
         if r['listing_active_count'] > 5:
@@ -60,7 +63,25 @@ while(state):
     limit+=increment
     offset+=increment        
 
+if not os.path.isfile("./stores.csv"):
+    print('make ./stores.csv')
+    with open("./stores.csv", "w", newline="") as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(
+                [
+                    "id"
+                    ,"shop_id"
+                    ,"shop_name"
+                    ,"listing_count"
+                    ,"e_time"
+                ]
+            )
+
 count = 0
-for store in stores:
-    count+=1
-    print('count: {}, store id: {}, listing count: {}'.format(count, store['shop_id'], store['listing_active_count']))
+with open("./stores.csv", "w", newline="") as csvfile:
+    writer = csv.writer(csvfile)
+    for store in stores:
+        count+=1
+        print('count: {}, shop id: {}, shop name: {}, listing count: {}'.format(count, store['shop_id'], store['shop_name'], store['listing_active_count']))
+        writer.writerow([count, store['shop_id'],store['shop_name'], store['listing_active_count']])
+
