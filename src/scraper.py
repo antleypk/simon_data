@@ -1,6 +1,6 @@
 import requests, json, csv, os, time
 
-def get_companies(pv_count, pv_listing_count):
+def get_shops(pv_count, pv_listing_count):
     state = True
     limit = 50
     offset = 0
@@ -40,7 +40,7 @@ def get_companies(pv_count, pv_listing_count):
     return stores    
 
 
-def save(companies, path):
+def save(shops, path):
     lcl_time = '{}'.format(time.time()).replace('.','-')
     lcl_time = lcl_time[:-8]
     lcl_path = path+'_{}.csv'.format(lcl_time)
@@ -58,19 +58,20 @@ def save(companies, path):
                     ]
                 )
                 lcl_id = 1
-                for company in companies:
-                    lcl_list = [lcl_id, company['shop_id'], company['shop_name'], company['listing_active_count'], str(time.time())]     
+                for shop in shops:
+                    lcl_list = [lcl_id, shop['shop_id'], shop['shop_name'], shop['listing_active_count'], str(time.time())]     
                     writer.writerow(lcl_list)
+                    lcl_id+=1
 
 def main():
-    company_count = 3
+    shop_count = 3
     min_active_listing = 3
     save_path = './data/shops'
-    companies = get_companies(company_count,min_active_listing)
-    for company in companies:
-        print('company: {}'.format(company['shop_name']))
+    shops = get_shops(shop_count,min_active_listing)
+    for shop in shops:
+        print('shop: {}'.format(shop['shop_name']))
     print(' ')
-    save(companies, save_path)
+    save(shops, save_path)
 
 
 if __name__ == "__main__":
