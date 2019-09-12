@@ -1,4 +1,4 @@
-import os,csv, requests , json 
+import os,csv, requests, json, time
 
 def get_recent():
     files = os.listdir("./data")
@@ -89,11 +89,38 @@ def word_counter(shop_id):
 
     return return_list
 
+def read(pv_list):
+    for item in pv_list:
+        print(item)
+    return pv_list
+
+def save(distributions, path):
+    s_t = '{}'.format(time.time())
+    time_split = s_t.split('.')
+    e = time_split[0]
+    lcl_path = path+'_{}.csv'.format(e)
+    if not os.path.isfile(path):
+        print('make {}'.format(lcl_path))
+        with open(lcl_path, "w", newline="") as csvfile:
+                writer = csv.writer(csvfile)
+                writer.writerow(
+                    [
+                        "id"
+                        ,"shop_id"
+                        ,"e_time"
+                    ]
+                )
+                lcl_id = 1
+                for d in distributions:
+                    lcl_list = [lcl_id, d['id'], d['distribution'], str(time.time())]     
+                    writer.writerow(lcl_list)
+                    lcl_id+=1    
 
 def main():
     timestamp = get_recent()
     print('timestamp: {}'.format(timestamp))
     distributions = []
+    save_path = './data/distribution'
     if not timestamp == 0:
         shops = get_shops(timestamp)
         for shop in shops:
@@ -102,8 +129,7 @@ def main():
             lcl['id'] = lcl_id
             lcl['distribution'] = word_counter(lcl_id)
             distributions.append(lcl)
-        for distro in distributions:
-            print(distro)
+        save(read(distributions), save_path)
     else:
         print("Please run 'scraper.py' first.")
 if __name__ == "__main__":
