@@ -91,13 +91,13 @@ import csv
 
 
 
-url = "https://openapi.etsy.com/v2/shops/21133149/listings/active?limit=25&offset=0&api_key=bvpvd0ns8aqk63229f9baz9u"
+url = "https://openapi.etsy.com/v2/shops/21132391/listings/active?limit=25&offset=0&api_key=bvpvd0ns8aqk63229f9baz9u"
 headers = {'user-agent': 'my-app/0.0.1'}
 
 r = requests.get(url, headers=headers)
 print('r: {}'.format(r))
 content = r.content
-#print('content: {}'.format(content))
+print('content: {}'.format(content))
 print('content type: {}'.format(type(content)))
 d_content = content.decode("utf-8")
 print('d_content type: {}'.format(type(d_content)))
@@ -106,8 +106,62 @@ print("content_json keys: {}".format(content_json.keys()))
 #print('results: {}'.format(content_json['results']))
 results = content_json['results']
 print("results type: {}".format(type(results)))
+#print("results: {}".format(results))
+#input('stop -- hit enter')
 result = results[0]
 print('result type: {}'.format(type(result)))
 result_keys = result.keys()
 print("result keys: {}".format(result_keys))
-print('result 0: listing id: {}, title: {}, description: {}'.format(result['listing_id'],result['title'],result['description']))
+result_string = ''
+result_string+=str(result['title'])
+result_string+=str(result['description'])
+#print('result 0: listing id: {}, title: {}, description: {}'.format(result['listing_id'],result['title'],result['description']))
+print('result string: {}'.format(result_string))
+result_list = result_string.lower().split(' ')
+
+word_set = set()
+clean_words = []
+
+
+for item in result_list:
+    item = item.strip(',')
+    item = item.strip('.')
+    item = item.strip('\n')
+    print('item: {}'.format(item))
+    word_set.add(item)
+    clean_words.append(item)
+
+
+word_gram  = []
+for w_set in word_set:
+    tmp_word = w_set
+    count = 0
+    for w_word in clean_words:
+        if w_set == w_word:
+            count+=1
+    word_frame = {}
+    word_frame['word'] = tmp_word
+    word_frame['count'] = count
+    word_gram.append(word_frame)
+
+for kount in word_gram:
+    print(kount)
+
+sorted_gram = sorted(word_gram, key = lambda i:i["count"], reverse=True)
+
+print("sorted gram: {}".format(sorted_gram))
+
+return_list = []
+r_count = 0
+for i in sorted_gram:
+    if r_count < 5:
+        print('i: {}'.format(i))
+        return_list.append(i)
+        r_count+=1
+    if r_count ==5:
+         break
+print('return list size: {}'.format(len(return_list)))
+print('return list: {}'.format(return_list))
+
+
+
