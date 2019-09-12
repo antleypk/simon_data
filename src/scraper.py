@@ -41,9 +41,10 @@ def get_shops(pv_count, pv_listing_count):
 
 
 def save(shops, path):
-    lcl_time = '{}'.format(time.time()).replace('.','-')
-    lcl_time = lcl_time[:-8]
-    lcl_path = path+'_{}.csv'.format(lcl_time)
+    s_t = '{}'.format(time.time())
+    time_split = s_t.split('.')
+    e = time_split[0]
+    lcl_path = path+'_{}.csv'.format(e)
     if not os.path.isfile(path):
         print('make {}'.format(lcl_path))
         with open(lcl_path, "w", newline="") as csvfile:
@@ -64,8 +65,8 @@ def save(shops, path):
                     lcl_id+=1
 
 def main():
-    shop_count = 3
-    min_active_listing = 3
+    shop_count = 10
+    min_active_listing = 25
     save_path = './data/shops'
     shops = get_shops(shop_count,min_active_listing)
     for shop in shops:
@@ -76,3 +77,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    #156831598
+    #1568313742
