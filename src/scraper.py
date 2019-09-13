@@ -1,6 +1,7 @@
 import requests, json, csv, os, time
 
 def get_shops(pv_count, pv_listing_count):
+    print("--get shops, pv_count: {}, pv_listing_count {}".format(pv_count, pv_listing_count))
     state = True
     limit = 50
     offset = 0
@@ -41,11 +42,12 @@ def get_shops(pv_count, pv_listing_count):
 
 
 def save(shops, path):
+    print("--save")
     s_t = '{}'.format(time.time())
     time_split = s_t.split('.')
     e = time_split[0]
     lcl_path = path+'_{}.csv'.format(e)
-    if not os.path.isfile(path):
+    if not os.path.isfile(lcl_path):
         print('make {}'.format(lcl_path))
         with open(lcl_path, "w", newline="") as csvfile:
                 writer = csv.writer(csvfile)
@@ -64,7 +66,18 @@ def save(shops, path):
                     writer.writerow(lcl_list)
                     lcl_id+=1
 
+def pprint(string):
+    print(string)
+    if not os.path.isdir("./data"):
+        os.makedirs("./data")
+    if not os.path.isfile("./data/logs.csv"):
+        os.system("touch ./data/logs.csv")
+    with open("./data/logs.csv","a", newline="") as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([str(time.time(), string)])
+
 def main():
+    pprint("--main")
     shop_count = 10
     min_active_listing = 25
     save_path = './data/shops'
@@ -77,6 +90,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-    #156831598
-    #1568313742
