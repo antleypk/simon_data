@@ -1,16 +1,26 @@
-Welcome to the etsy store analyzer v1.1.1
+Welcome to the etsy store analyzer v1.0.0
 
 To operate the application, first clone the repo.
 
 After cloning the repo navigate to application folder.
 
+!!You must go to /application/secretdotkey and convert it to the proper file format to run the application!!
+
 Once in the src folder, execute 'app.sh' -> "you@yourmachine$ ./app.sh"
 
-This will call two python files: 'scraper.py, and analyzer.py'
+This will call two python files: 'scraper.py', and 'analyzer.py'
 
-        scraper.py: builds lists of companies to do anaylsis on. It saves
+        scraper.py: builds lists of companies to do analysis on. It saves
     the list in /application/data/shops_epocTimestamp.
 
-        analyzer.py: Finds the distriubtion of words found for a specific shop.
-    It will either get the most recent list of shops, or can also take a timestamp
-    as positional argument $1.  analyzer.py saves the results at application/data/distriubtion_epocTimestamp 
+        analyzer.py: finds the distribution of words found for a specific shop.
+    It will either get the most recent list of shops, or can also take a epoch_timestamp
+    as positional argument $1. The timestamp must be one from /application/data/shops_epocTimestamp.csv  
+    analyzer.py saves the results at /application/data/distribution_epocTimestamp 
+
+The python files can be called multiple times; they do not need to be called together.
+
+scraper.py must run at least one time before analyzer.py can return meaningful results. 
+
+Due to relative file paths all files must be run from inside the application directory.
+
