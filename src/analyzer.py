@@ -1,5 +1,5 @@
 import os, csv, requests, json, time, sys
-import scraper
+import scraper, config
 
 def get_recent_run():
     scraper.pprint('--get recent run')
@@ -104,7 +104,7 @@ def word_counter(shop_id, key):
                     if not i["word"] == '–':
                         return_list.append(i)
                         r_count+=1
-            if r_count ==5:
+            if r_count ==config.term_count:
                 break
         scraper.pprint("     Top Terms: {}".format(return_list))
         return return_list

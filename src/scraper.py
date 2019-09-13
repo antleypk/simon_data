@@ -1,4 +1,4 @@
-import requests, json, csv, os, time
+import requests, json, csv, os, time, config
 
 def get_shops(pv_count, pv_listing_count, key):
     #get shops returns a configureable amount of stores, pv_count
@@ -85,8 +85,8 @@ def get_key():
 
 def main():
     pprint("--main 'scraper.py'")
-    shop_count = 10
-    min_active_listing = 25
+    shop_count = config.shop_count
+    min_active_listing = config.min_active_listings
     save_path = './data/shops'
     key = get_key()
     shops = get_shops(shop_count,min_active_listing,key)
