@@ -1,291 +1,187 @@
-1568347105.266513,    ,--main 'scraper.py'
-1568347105.266713,    ,"--get shops, pv_count: 10, pv_listing_count 25"
-1568347107.6077952,    ,"---- API response code: <Response [200]>, Limit: 50, Offset: 0"
-1568347107.6099792,    , 
-1568347112.8564377,    ,"---- API response code: <Response [200]>, Limit: 100, Offset: 50"
-1568347112.8575552,    ,"Shop ID: 21143715, Shop Name: INVIONPRINTABLE, Active Listings: 46, Count: 1"
-1568347112.857641,    , 
-1568347117.612892,    ,"---- API response code: <Response [200]>, Limit: 150, Offset: 100"
-1568347117.6180952,    ,"Shop ID: 21143219, Shop Name: Scentsibly, Active Listings: 50, Count: 2"
-1568347117.6181583,    , 
-1568347122.046248,    ,"---- API response code: <Response [200]>, Limit: 200, Offset: 150"
-1568347122.047631,    ,"Shop ID: 21142965, Shop Name: WoodenLifeStore, Active Listings: 37, Count: 3"
-1568347122.0476825,    , 
-1568347127.6097913,    ,"---- API response code: <Response [200]>, Limit: 250, Offset: 200"
-1568347127.6147203,    ,"Shop ID: 21142331, Shop Name: AUPAPCORD, Active Listings: 34, Count: 4"
-1568347127.6149,    , 
-1568347131.9744396,    ,"---- API response code: <Response [200]>, Limit: 300, Offset: 250"
-1568347131.9759989,    , 
-1568347137.6094925,    ,"---- API response code: <Response [200]>, Limit: 350, Offset: 300"
-1568347137.6139228,    ,"Shop ID: 21141491, Shop Name: NolaCaseUnitedStates, Active Listings: 52, Count: 5"
-1568347137.6141787,    , 
-1568347141.982228,    ,"---- API response code: <Response [200]>, Limit: 400, Offset: 350"
-1568347141.98502,    ,"Shop ID: 21140651, Shop Name: BowutifulBowsDesign, Active Listings: 28, Count: 6"
-1568347141.9851773,    , 
-1568347147.6233594,    ,"---- API response code: <Response [200]>, Limit: 450, Offset: 400"
-1568347147.627615,    , 
-1568347152.1433337,    ,"---- API response code: <Response [200]>, Limit: 500, Offset: 450"
-1568347152.1464596,    , 
-1568347157.6222107,    ,"---- API response code: <Response [200]>, Limit: 550, Offset: 500"
-1568347157.6242793,    ,"Shop ID: 21139507, Shop Name: FREESIAInvitation, Active Listings: 81, Count: 7"
-1568347157.6243494,    ,"Shop ID: 21139433, Shop Name: MartiWeddings, Active Listings: 30, Count: 8"
-1568347157.624413,    ,"Shop ID: 21139327, Shop Name: SimplyAwfulGifts, Active Listings: 32, Count: 9"
-1568347157.6244671,    , 
-1568347161.981888,    ,"---- API response code: <Response [200]>, Limit: 600, Offset: 550"
-1568347161.9834182,    ,"Shop ID: 21139109, Shop Name: HermesPatches, Active Listings: 58, Count: 10"
-1568347161.9834852,    , 
-1568347161.9835467,    , 
-1568347161.9837067,    ,"shop: INVIONPRINTABLE, id: 21143715 active listings: 46"
-1568347161.9837701,    ,"shop: Scentsibly, id: 21143219 active listings: 50"
-1568347161.9838214,    ,"shop: WoodenLifeStore, id: 21142965 active listings: 37"
-1568347161.983872,    ,"shop: AUPAPCORD, id: 21142331 active listings: 34"
-1568347161.9839213,    ,"shop: NolaCaseUnitedStates, id: 21141491 active listings: 52"
-1568347161.9839709,    ,"shop: BowutifulBowsDesign, id: 21140651 active listings: 28"
-1568347161.9840198,    ,"shop: FREESIAInvitation, id: 21139507 active listings: 81"
-1568347161.9840689,    ,"shop: MartiWeddings, id: 21139433 active listings: 30"
-1568347161.984118,    ,"shop: SimplyAwfulGifts, id: 21139327 active listings: 32"
-1568347161.9841666,    ,"shop: HermesPatches, id: 21139109 active listings: 58"
-1568347161.9842134,    , 
-1568347161.9842594,    ,--save
-1568347161.9843333,    ,make ./data/shops_1568347161.csv
-1568347162.1000412,    ,"--'main, analyzer.py'"
-1568347162.1001515,    ,--get recent run
-1568347162.1002145,    ,timestamp: 1568347161
-1568347162.1002548,    ,"--get shops, pv_timestamp: 1568347161"
-1568347162.100368,    ,"--word counter, shop_id: 21143715"
-1568347164.0554795,    ,API RESPONSE: 200
-1568347164.099857,    ,"     Top Terms: [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 225}, {'word': 'the', 'count': 200}]"
-1568347164.1001828,    ,"--word counter, shop_id: 21143219"
-1568347167.6221154,    ,API RESPONSE: 200
-1568347167.6991494,    ,"     Top Terms: [{'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
-1568347167.6993737,    ,"--word counter, shop_id: 21142965"
-1568347168.9775712,    ,API RESPONSE: 200
-1568347168.983456,    ,"     Top Terms: [{'word': 'the', 'count': 175}, {'word': 'handmade', 'count': 75}, {'word': 'wood', 'count': 75}, {'word': 'boat', 'count': 54}, {'word': 'house', 'count': 50}]"
-1568347168.9836287,    ,"--word counter, shop_id: 21142331"
-1568347171.9718306,    ,API RESPONSE: 200
-1568347171.9905815,    ,"     Top Terms: [{'word': 'to', 'count': 59}, {'word': 'for', 'count': 51}, {'word': 'you', 'count': 51}, {'word': 'jacket', 'count': 46}, {'word': 'of', 'count': 41}]"
-1568347171.990763,    ,"--word counter, shop_id: 21141491"
-1568347177.607506,    ,API RESPONSE: 200
-1568347177.6246958,    ,"     Top Terms: [{'word': 'to', 'count': 150}, {'word': 'phone', 'count': 100}, {'word': 'wood', 'count': 100}, {'word': 'samsung', 'count': 75}, {'word': 'case', 'count': 75}]"
-1568347177.6249099,    ,"--word counter, shop_id: 21140651"
-1568347181.9827266,    ,API RESPONSE: 200
-1568347181.9837742,    ,"     Top Terms: [{'word': 'bow4in', 'count': 16}, {'word': 'double', 'count': 6}, {'word': 'layer', 'count': 5}, {'word': 'bows4in', 'count': 5}, {'word': 'with', 'count': 4}]"
-1568347181.983928,    ,"--word counter, shop_id: 21139507"
-1568347187.6204698,    ,API RESPONSE: 200
-1568347187.669918,    ,"     Top Terms: [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
-1568347187.6702142,    ,"--word counter, shop_id: 21139433"
-1568347190.8810914,    ,API RESPONSE: 200
-1568347190.9035318,    ,"     Top Terms: [{'word': 'the', 'count': 123}, {'word': 'to', 'count': 121}, {'word': 'in', 'count': 75}, {'word': 'your', 'count': 63}, {'word': 'and', 'count': 63}]"
-1568347190.9038074,    ,"--word counter, shop_id: 21139327"
-1568347191.972203,    ,API RESPONSE: 200
-1568347191.9775443,    ,"     Top Terms: [{'word': 'glossy', 'count': 46}, {'word': 'mug', 'count': 25}, {'word': 'white', 'count': 25}, {'word': '11oz', 'count': 25}, {'word': 'bright', 'count': 23}]"
-1568347191.977802,    ,"--word counter, shop_id: 21139109"
-1568347192.746116,    ,API RESPONSE: 200
-1568347192.7671845,    ,"     Top Terms: [{'word': 'the', 'count': 175}, {'word': 'on', 'count': 125}, {'word': 'iron', 'count': 100}, {'word': 'logo', 'count': 90}, {'word': 'bussiness', 'count': 75}]"
-1568347192.7675688,    ,--read
-1568347192.7676408,    ,"{'id': '21143715', 'distribution': [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 225}, {'word': 'the', 'count': 200}]}"
-1568347192.7677095,    ,"{'id': '21143219', 'distribution': [{'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]}"
-1568347192.7677732,    ,"{'id': '21142965', 'distribution': [{'word': 'the', 'count': 175}, {'word': 'handmade', 'count': 75}, {'word': 'wood', 'count': 75}, {'word': 'boat', 'count': 54}, {'word': 'house', 'count': 50}]}"
-1568347192.7678342,    ,"{'id': '21142331', 'distribution': [{'word': 'to', 'count': 59}, {'word': 'for', 'count': 51}, {'word': 'you', 'count': 51}, {'word': 'jacket', 'count': 46}, {'word': 'of', 'count': 41}]}"
-1568347192.7678916,    ,"{'id': '21141491', 'distribution': [{'word': 'to', 'count': 150}, {'word': 'phone', 'count': 100}, {'word': 'wood', 'count': 100}, {'word': 'samsung', 'count': 75}, {'word': 'case', 'count': 75}]}"
-1568347192.7679498,    ,"{'id': '21140651', 'distribution': [{'word': 'bow4in', 'count': 16}, {'word': 'double', 'count': 6}, {'word': 'layer', 'count': 5}, {'word': 'bows4in', 'count': 5}, {'word': 'with', 'count': 4}]}"
-1568347192.768026,    ,"{'id': '21139507', 'distribution': [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]}"
-1568347192.7681446,    ,"{'id': '21139433', 'distribution': [{'word': 'the', 'count': 123}, {'word': 'to', 'count': 121}, {'word': 'in', 'count': 75}, {'word': 'your', 'count': 63}, {'word': 'and', 'count': 63}]}"
-1568347192.7682548,    ,"{'id': '21139327', 'distribution': [{'word': 'glossy', 'count': 46}, {'word': 'mug', 'count': 25}, {'word': 'white', 'count': 25}, {'word': '11oz', 'count': 25}, {'word': 'bright', 'count': 23}]}"
-1568347192.7683196,    ,"{'id': '21139109', 'distribution': [{'word': 'the', 'count': 175}, {'word': 'on', 'count': 125}, {'word': 'iron', 'count': 100}, {'word': 'logo', 'count': 90}, {'word': 'bussiness', 'count': 75}]}"
-1568347192.76839,    ,--save
-1568347192.7684438,    ,make ./data/distribution_1568347192.csv
-1568348140.647922,    ,--main 'scraper.py'
-1568348140.6480844,    ,"--get shops, pv_count: 10, pv_listing_count 25"
-1568348143.010681,    ,"---- API response code: <Response [200]>, Limit: 50, Offset: 0"
-1568348143.0116024,    , 
-1568348151.9735827,    ,"---- API response code: <Response [200]>, Limit: 100, Offset: 50"
-1568348151.9749267,    ,"Shop ID: 21143715, Shop Name: INVIONPRINTABLE, Active Listings: 46, Count: 1"
-1568348151.9751158,    , 
-1568348157.6201565,    ,"---- API response code: <Response [200]>, Limit: 150, Offset: 100"
-1568348157.622165,    ,"Shop ID: 21143219, Shop Name: Scentsibly, Active Listings: 50, Count: 2"
-1568348157.6222491,    , 
-1568348163.0345402,    ,"---- API response code: <Response [200]>, Limit: 200, Offset: 150"
-1568348163.0367675,    ,"Shop ID: 21142965, Shop Name: WoodenLifeStore, Active Listings: 37, Count: 3"
-1568348163.0369093,    , 
-1568348167.6190457,    ,"---- API response code: <Response [200]>, Limit: 250, Offset: 200"
-1568348167.6206954,    ,"Shop ID: 21142331, Shop Name: AUPAPCORD, Active Listings: 34, Count: 4"
-1568348167.6207683,    , 
-1568348173.738151,    ,"---- API response code: <Response [200]>, Limit: 300, Offset: 250"
-1568348173.7404122,    , 
-1568348179.8639004,    ,"---- API response code: <Response [200]>, Limit: 350, Offset: 300"
-1568348179.8663044,    ,"Shop ID: 21141491, Shop Name: NolaCaseUnitedStates, Active Listings: 52, Count: 5"
-1568348179.86642,    , 
-1568348187.6222854,    ,"---- API response code: <Response [200]>, Limit: 400, Offset: 350"
-1568348187.6248767,    , 
-1568348196.9999564,    ,"---- API response code: <Response [200]>, Limit: 450, Offset: 400"
-1568348197.0018306,    ,"Shop ID: 21140651, Shop Name: BowutifulBowsDesign, Active Listings: 28, Count: 6"
-1568348197.0019283,    , 
-1568348201.983157,    ,"---- API response code: <Response [200]>, Limit: 500, Offset: 450"
-1568348201.9858184,    , 
-1568348207.0339277,    ,"---- API response code: <Response [200]>, Limit: 550, Offset: 500"
-1568348207.0382397,    ,"Shop ID: 21139507, Shop Name: FREESIAInvitation, Active Listings: 81, Count: 7"
-1568348207.0383112,    ,"Shop ID: 21139433, Shop Name: MartiWeddings, Active Listings: 30, Count: 8"
-1568348207.0383668,    , 
-1568348214.682174,    ,"---- API response code: <Response [200]>, Limit: 600, Offset: 550"
-1568348214.6858392,    ,"Shop ID: 21139327, Shop Name: SimplyAwfulGifts, Active Listings: 32, Count: 9"
-1568348214.6860664,    ,"Shop ID: 21139109, Shop Name: HermesPatches, Active Listings: 58, Count: 10"
-1568348214.6862314,    , 
-1568348214.6863704,    , 
-1568348214.6867294,    ,"shop: INVIONPRINTABLE, id: 21143715 active listings: 46"
-1568348214.686882,    ,"shop: Scentsibly, id: 21143219 active listings: 50"
-1568348214.687045,    ,"shop: WoodenLifeStore, id: 21142965 active listings: 37"
-1568348214.6871915,    ,"shop: AUPAPCORD, id: 21142331 active listings: 34"
-1568348214.6873322,    ,"shop: NolaCaseUnitedStates, id: 21141491 active listings: 52"
-1568348214.6874714,    ,"shop: BowutifulBowsDesign, id: 21140651 active listings: 28"
-1568348214.6876116,    ,"shop: FREESIAInvitation, id: 21139507 active listings: 81"
-1568348214.6877744,    ,"shop: MartiWeddings, id: 21139433 active listings: 30"
-1568348214.6879156,    ,"shop: SimplyAwfulGifts, id: 21139327 active listings: 32"
-1568348214.6880515,    ,"shop: HermesPatches, id: 21139109 active listings: 58"
-1568348214.688181,    , 
-1568348214.6883094,    ,--save
-1568348214.688495,    ,make ./data/shops_1568348214.csv
-1568348214.8126717,    ,"--'main, analyzer.py'"
-1568348214.8128374,    ,--get recent run
-1568348214.8129406,    ,timestamp: 1568348214
-1568348214.8130188,    ,"--get shops, pv_timestamp: 1568348214"
-1568348214.8131733,    ,"--word counter, shop_id: 21143715"
-1568348217.6128497,    ,API RESPONSE: 200
-1568348217.6546688,    ,"     Top Terms: [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 225}, {'word': 'the', 'count': 200}]"
-1568348217.6549938,    ,"--word counter, shop_id: 21143219"
-1568348218.7769904,    ,API RESPONSE: 200
-1568348218.8523421,    ,"     Top Terms: [{'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
-1568348218.8525476,    ,"--word counter, shop_id: 21142965"
-1568348219.872093,    ,API RESPONSE: 200
-1568348219.8792799,    ,"     Top Terms: [{'word': 'the', 'count': 175}, {'word': 'wood', 'count': 75}, {'word': 'handmade', 'count': 75}, {'word': 'boat', 'count': 54}, {'word': 'inc', 'count': 50}]"
-1568348219.879495,    ,"--word counter, shop_id: 21142331"
-1568348221.973101,    ,API RESPONSE: 200
-1568348221.9907482,    ,"     Top Terms: [{'word': 'to', 'count': 59}, {'word': 'you', 'count': 51}, {'word': 'for', 'count': 51}, {'word': 'jacket', 'count': 46}, {'word': 'of', 'count': 41}]"
-1568348221.9910436,    ,"--word counter, shop_id: 21141491"
-1568348224.2428117,    ,API RESPONSE: 200
-1568348224.2609239,    ,"     Top Terms: [{'word': 'to', 'count': 150}, {'word': 'wood', 'count': 100}, {'word': 'phone', 'count': 100}, {'word': 'case', 'count': 75}, {'word': 'and', 'count': 75}]"
-1568348224.2611892,    ,"--word counter, shop_id: 21140651"
-1568348225.2420025,    ,API RESPONSE: 200
-1568348225.2427893,    ,"     Top Terms: [{'word': 'bow4in', 'count': 16}, {'word': 'double', 'count': 6}, {'word': 'layer', 'count': 5}, {'word': 'bows4in', 'count': 5}, {'word': 'with', 'count': 4}]"
-1568348225.2429216,    ,"--word counter, shop_id: 21139507"
-1568348227.6081438,    ,API RESPONSE: 200
-1568348227.6588552,    ,"     Top Terms: [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'the', 'count': 200}, {'word': 'or', 'count': 200}]"
-1568348227.659159,    ,"--word counter, shop_id: 21139433"
-1568348229.992535,    ,API RESPONSE: 200
-1568348230.0169988,    ,"     Top Terms: [{'word': 'the', 'count': 123}, {'word': 'to', 'count': 121}, {'word': 'in', 'count': 75}, {'word': 'and', 'count': 63}, {'word': 'your', 'count': 63}]"
-1568348230.0172422,    ,"--word counter, shop_id: 21139327"
-1568348231.9764721,    ,API RESPONSE: 200
-1568348231.979814,    ,"     Top Terms: [{'word': 'glossy', 'count': 46}, {'word': 'mug', 'count': 25}, {'word': 'white', 'count': 25}, {'word': '11oz', 'count': 25}, {'word': 'dishwasher', 'count': 23}]"
-1568348231.9799883,    ,"--word counter, shop_id: 21139109"
-1568348232.8864367,    ,API RESPONSE: 200
-1568348232.9046,    ,"     Top Terms: [{'word': 'the', 'count': 175}, {'word': 'on', 'count': 125}, {'word': 'iron', 'count': 100}, {'word': 'logo', 'count': 90}, {'word': 'bussiness', 'count': 75}]"
-1568348232.9048557,    ,--read
-1568348232.9049087,    ,"{'id': '21143715', 'distribution': [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 225}, {'word': 'the', 'count': 200}]}"
-1568348232.9049635,    ,"{'id': '21143219', 'distribution': [{'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]}"
-1568348232.9050186,    ,"{'id': '21142965', 'distribution': [{'word': 'the', 'count': 175}, {'word': 'wood', 'count': 75}, {'word': 'handmade', 'count': 75}, {'word': 'boat', 'count': 54}, {'word': 'inc', 'count': 50}]}"
-1568348232.9050913,    ,"{'id': '21142331', 'distribution': [{'word': 'to', 'count': 59}, {'word': 'you', 'count': 51}, {'word': 'for', 'count': 51}, {'word': 'jacket', 'count': 46}, {'word': 'of', 'count': 41}]}"
-1568348232.9051638,    ,"{'id': '21141491', 'distribution': [{'word': 'to', 'count': 150}, {'word': 'wood', 'count': 100}, {'word': 'phone', 'count': 100}, {'word': 'case', 'count': 75}, {'word': 'and', 'count': 75}]}"
-1568348232.90521,    ,"{'id': '21140651', 'distribution': [{'word': 'bow4in', 'count': 16}, {'word': 'double', 'count': 6}, {'word': 'layer', 'count': 5}, {'word': 'bows4in', 'count': 5}, {'word': 'with', 'count': 4}]}"
-1568348232.9052558,    ,"{'id': '21139507', 'distribution': [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'the', 'count': 200}, {'word': 'or', 'count': 200}]}"
-1568348232.9053013,    ,"{'id': '21139433', 'distribution': [{'word': 'the', 'count': 123}, {'word': 'to', 'count': 121}, {'word': 'in', 'count': 75}, {'word': 'and', 'count': 63}, {'word': 'your', 'count': 63}]}"
-1568348232.9053476,    ,"{'id': '21139327', 'distribution': [{'word': 'glossy', 'count': 46}, {'word': 'mug', 'count': 25}, {'word': 'white', 'count': 25}, {'word': '11oz', 'count': 25}, {'word': 'dishwasher', 'count': 23}]}"
-1568348232.9053934,    ,"{'id': '21139109', 'distribution': [{'word': 'the', 'count': 175}, {'word': 'on', 'count': 125}, {'word': 'iron', 'count': 100}, {'word': 'logo', 'count': 90}, {'word': 'bussiness', 'count': 75}]}"
-1568348232.9054356,    ,--save
-1568348232.9054763,    ,make ./data/distribution_1568348232.csv
-1568348511.8710783,    ,--main 'scraper.py'
-1568348511.8712366,    ,"--get shops, pv_count: 10, pv_listing_count 25"
-1568348513.7117789,    ,"---- API response code: <Response [200]>, Limit: 50, Offset: 0"
-1568348513.7132022,    , 
-1568348517.6111493,    ,"---- API response code: <Response [200]>, Limit: 100, Offset: 50"
-1568348517.6146913,    ,"Shop ID: 21143715, Shop Name: INVIONPRINTABLE, Active Listings: 46, Count: 1"
-1568348517.614763,    , 
-1568348521.9732969,    ,"---- API response code: <Response [200]>, Limit: 150, Offset: 100"
-1568348521.9751124,    ,"Shop ID: 21143219, Shop Name: Scentsibly, Active Listings: 50, Count: 2"
-1568348521.9751747,    , 
-1568348527.6269677,    ,"---- API response code: <Response [200]>, Limit: 200, Offset: 150"
-1568348527.6323748,    ,"Shop ID: 21142965, Shop Name: WoodenLifeStore, Active Listings: 37, Count: 3"
-1568348527.6326458,    , 
-1568348531.9737408,    ,"---- API response code: <Response [200]>, Limit: 250, Offset: 200"
-1568348531.9767573,    ,"Shop ID: 21142331, Shop Name: AUPAPCORD, Active Listings: 34, Count: 4"
-1568348531.9768987,    , 
-1568348536.2160885,    ,"---- API response code: <Response [200]>, Limit: 300, Offset: 250"
-1568348536.218423,    , 
-1568348541.9774635,    ,"---- API response code: <Response [200]>, Limit: 350, Offset: 300"
-1568348541.9792087,    ,"Shop ID: 21141491, Shop Name: NolaCaseUnitedStates, Active Listings: 52, Count: 5"
-1568348541.9792726,    , 
-1568348546.466524,    ,"---- API response code: <Response [200]>, Limit: 400, Offset: 350"
-1568348546.4702299,    , 
-1568348550.0256932,    ,"---- API response code: <Response [200]>, Limit: 450, Offset: 400"
-1568348550.02963,    ,"Shop ID: 21140651, Shop Name: BowutifulBowsDesign, Active Listings: 28, Count: 6"
-1568348550.029862,    , 
-1568348557.6195495,    ,"---- API response code: <Response [200]>, Limit: 500, Offset: 450"
-1568348557.6212587,    , 
-1568348561.9817142,    ,"---- API response code: <Response [200]>, Limit: 550, Offset: 500"
-1568348561.9828472,    ,"Shop ID: 21139507, Shop Name: FREESIAInvitation, Active Listings: 81, Count: 7"
-1568348561.9829006,    ,"Shop ID: 21139433, Shop Name: MartiWeddings, Active Listings: 30, Count: 8"
-1568348561.9829652,    , 
-1568348565.6768515,    ,"---- API response code: <Response [200]>, Limit: 600, Offset: 550"
-1568348565.6798022,    ,"Shop ID: 21139327, Shop Name: SimplyAwfulGifts, Active Listings: 32, Count: 9"
-1568348565.6799636,    ,"Shop ID: 21139109, Shop Name: HermesPatches, Active Listings: 58, Count: 10"
-1568348565.68008,    , 
-1568348565.6801827,    , 
-1568348565.6804519,    ,"shop: INVIONPRINTABLE, id: 21143715 active listings: 46"
-1568348565.6805654,    ,"shop: Scentsibly, id: 21143219 active listings: 50"
-1568348565.6806715,    ,"shop: WoodenLifeStore, id: 21142965 active listings: 37"
-1568348565.680775,    ,"shop: AUPAPCORD, id: 21142331 active listings: 34"
-1568348565.680877,    ,"shop: NolaCaseUnitedStates, id: 21141491 active listings: 52"
-1568348565.68098,    ,"shop: BowutifulBowsDesign, id: 21140651 active listings: 28"
-1568348565.6810827,    ,"shop: FREESIAInvitation, id: 21139507 active listings: 81"
-1568348565.6811862,    ,"shop: MartiWeddings, id: 21139433 active listings: 30"
-1568348565.6812892,    ,"shop: SimplyAwfulGifts, id: 21139327 active listings: 32"
-1568348565.681392,    ,"shop: HermesPatches, id: 21139109 active listings: 58"
-1568348565.681489,    , 
-1568348565.6815856,    ,--save
-1568348565.681737,    ,make ./data/shops_1568348565.csv
-1568348565.7949862,    ,"--'main, analyzer.py'"
-1568348565.7951586,    ,--get recent run
-1568348565.7952604,    ,timestamp: 1568348565
-1568348565.7953265,    ,"--get shops, pv_timestamp: 1568348565"
-1568348565.7954657,    ,"--word counter, shop_id: 21143715"
-1568348567.6103816,    ,API RESPONSE: 200
-1568348567.6568706,    ,"     Top Terms: [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 225}, {'word': 'the', 'count': 200}]"
-1568348567.6571975,    ,"--word counter, shop_id: 21143219"
-1568348571.9831502,    ,API RESPONSE: 200
-1568348572.0607529,    ,"     Top Terms: [{'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
-1568348572.0609963,    ,"--word counter, shop_id: 21142965"
-1568348575.1292093,    ,API RESPONSE: 200
-1568348575.1403298,    ,"     Top Terms: [{'word': 'the', 'count': 175}, {'word': 'handmade', 'count': 75}, {'word': 'wood', 'count': 75}, {'word': 'boat', 'count': 54}, {'word': 'ship', 'count': 50}]"
-1568348575.140508,    ,"--word counter, shop_id: 21142331"
-1568348577.1743252,    ,API RESPONSE: 200
-1568348577.1914487,    ,"     Top Terms: [{'word': 'to', 'count': 59}, {'word': 'you', 'count': 51}, {'word': 'for', 'count': 51}, {'word': 'jacket', 'count': 46}, {'word': 'of', 'count': 41}]"
-1568348577.1916397,    ,"--word counter, shop_id: 21141491"
-1568348580.5107296,    ,API RESPONSE: 200
-1568348580.529181,    ,"     Top Terms: [{'word': 'to', 'count': 150}, {'word': 'phone', 'count': 100}, {'word': 'wood', 'count': 100}, {'word': 'case', 'count': 75}, {'word': 'and', 'count': 75}]"
-1568348580.5294235,    ,"--word counter, shop_id: 21140651"
-1568348581.2712631,    ,API RESPONSE: 200
-1568348581.274091,    ,"     Top Terms: [{'word': 'bow4in', 'count': 16}, {'word': 'double', 'count': 6}, {'word': 'bows4in', 'count': 5}, {'word': 'layer', 'count': 5}, {'word': 'with', 'count': 4}]"
-1568348581.2742062,    ,"--word counter, shop_id: 21139507"
-1568348581.9729016,    ,API RESPONSE: 200
-1568348582.0141528,    ,"     Top Terms: [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
-1568348582.0144563,    ,"--word counter, shop_id: 21139433"
-1568348583.2470863,    ,API RESPONSE: 200
-1568348583.2735765,    ,"     Top Terms: [{'word': 'the', 'count': 123}, {'word': 'to', 'count': 121}, {'word': 'in', 'count': 75}, {'word': 'and', 'count': 63}, {'word': 'your', 'count': 63}]"
-1568348583.2738552,    ,"--word counter, shop_id: 21139327"
-1568348584.2473257,    ,API RESPONSE: 200
-1568348584.2500844,    ,"     Top Terms: [{'word': 'glossy', 'count': 46}, {'word': '11oz', 'count': 25}, {'word': 'mug', 'count': 25}, {'word': 'white', 'count': 25}, {'word': '&', 'count': 23}]"
-1568348584.2503781,    ,"--word counter, shop_id: 21139109"
-1568348585.2447004,    ,API RESPONSE: 200
-1568348585.2612975,    ,"     Top Terms: [{'word': 'the', 'count': 175}, {'word': 'on', 'count': 125}, {'word': 'iron', 'count': 100}, {'word': 'logo', 'count': 90}, {'word': 'days', 'count': 75}]"
-1568348585.2614796,    ,--read
-1568348585.261532,    ,"{'id': '21143715', 'distribution': [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 225}, {'word': 'the', 'count': 200}]}"
-1568348585.2615821,    ,"{'id': '21143219', 'distribution': [{'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]}"
-1568348585.2616308,    ,"{'id': '21142965', 'distribution': [{'word': 'the', 'count': 175}, {'word': 'handmade', 'count': 75}, {'word': 'wood', 'count': 75}, {'word': 'boat', 'count': 54}, {'word': 'ship', 'count': 50}]}"
-1568348585.2616773,    ,"{'id': '21142331', 'distribution': [{'word': 'to', 'count': 59}, {'word': 'you', 'count': 51}, {'word': 'for', 'count': 51}, {'word': 'jacket', 'count': 46}, {'word': 'of', 'count': 41}]}"
-1568348585.261723,    ,"{'id': '21141491', 'distribution': [{'word': 'to', 'count': 150}, {'word': 'phone', 'count': 100}, {'word': 'wood', 'count': 100}, {'word': 'case', 'count': 75}, {'word': 'and', 'count': 75}]}"
-1568348585.2617688,    ,"{'id': '21140651', 'distribution': [{'word': 'bow4in', 'count': 16}, {'word': 'double', 'count': 6}, {'word': 'bows4in', 'count': 5}, {'word': 'layer', 'count': 5}, {'word': 'with', 'count': 4}]}"
-1568348585.261815,    ,"{'id': '21139507', 'distribution': [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]}"
-1568348585.26186,    ,"{'id': '21139433', 'distribution': [{'word': 'the', 'count': 123}, {'word': 'to', 'count': 121}, {'word': 'in', 'count': 75}, {'word': 'and', 'count': 63}, {'word': 'your', 'count': 63}]}"
-1568348585.2619047,    ,"{'id': '21139327', 'distribution': [{'word': 'glossy', 'count': 46}, {'word': '11oz', 'count': 25}, {'word': 'mug', 'count': 25}, {'word': 'white', 'count': 25}, {'word': '&', 'count': 23}]}"
-1568348585.2619488,    ,"{'id': '21139109', 'distribution': [{'word': 'the', 'count': 175}, {'word': 'on', 'count': 125}, {'word': 'iron', 'count': 100}, {'word': 'logo', 'count': 90}, {'word': 'days', 'count': 75}]}"
-1568348585.2620044,    ,--save
-1568348585.2620454,    ,make ./data/distribution_1568348585.csv
+1568394886.3631492,    ,--main 'scraper.py'
+1568394886.3633578,    ,"--get shops, pv_count: 10, pv_listing_count 25"
+1568394889.0017905,    ,"---- API response code: <Response [200]>, Limit: 50, Offset: 0"
+1568394889.00382,    ,"Shop ID: 21148095, Shop Name: KONTOLPANEL, Active Listings: 28, Count: 1"
+1568394889.0038807,    , 
+1568394893.7081082,    ,"---- API response code: <Response [200]>, Limit: 100, Offset: 50"
+1568394893.7091515,    ,"Shop ID: 21147631, Shop Name: WCUMUMInvitation, Active Listings: 28, Count: 2"
+1568394893.7092156,    ,"Shop ID: 21147421, Shop Name: MettaCard, Active Listings: 76, Count: 3"
+1568394893.7092547,    ,"Shop ID: 21147377, Shop Name: LogosUSA, Active Listings: 43, Count: 4"
+1568394893.7092893,    ,"Shop ID: 21147303, Shop Name: CLARABELLAShop, Active Listings: 26, Count: 5"
+1568394893.7093368,    ,"Shop ID: 21146975, Shop Name: 7SVG7, Active Listings: 43, Count: 6"
+1568394893.7093742,    , 
+1568394898.013433,    ,"---- API response code: <Response [200]>, Limit: 150, Offset: 100"
+1568394898.015484,    , 
+1568394903.028462,    ,"---- API response code: <Response [200]>, Limit: 200, Offset: 150"
+1568394903.031304,    , 
+1568394907.7179837,    ,"---- API response code: <Response [200]>, Limit: 250, Offset: 200"
+1568394907.7189791,    ,"Shop ID: 21145879, Shop Name: mmecartier, Active Listings: 59, Count: 7"
+1568394907.719043,    , 
+1568394912.2561824,    ,"---- API response code: <Response [200]>, Limit: 300, Offset: 250"
+1568394912.2578363,    , 
+1568394916.9193995,    ,"---- API response code: <Response [200]>, Limit: 350, Offset: 300"
+1568394916.9223266,    ,"Shop ID: 21144935, Shop Name: EnchantingRose, Active Listings: 49, Count: 8"
+1568394916.92248,    ,"Shop ID: 21144837, Shop Name: ABNProductions, Active Listings: 57, Count: 9"
+1568394916.922612,    , 
+1568394921.019368,    ,"---- API response code: <Response [200]>, Limit: 400, Offset: 350"
+1568394921.0217083,    , 
+1568394925.8778875,    ,"---- API response code: <Response [200]>, Limit: 450, Offset: 400"
+1568394925.8802874,    , 
+1568394931.2019413,    ,"---- API response code: <Response [200]>, Limit: 500, Offset: 450"
+1568394931.2042232,    ,"Shop ID: 21143219, Shop Name: Scentsibly, Active Listings: 50, Count: 10"
+1568394931.2042773,    , 
+1568394931.2043161,    , 
+1568394931.2044508,    ,"shop: KONTOLPANEL, id: 21148095 active listings: 28"
+1568394931.2044933,    ,"shop: WCUMUMInvitation, id: 21147631 active listings: 28"
+1568394931.204532,    ,"shop: MettaCard, id: 21147421 active listings: 76"
+1568394931.2045684,    ,"shop: LogosUSA, id: 21147377 active listings: 43"
+1568394931.2046041,    ,"shop: CLARABELLAShop, id: 21147303 active listings: 26"
+1568394931.20464,    ,"shop: 7SVG7, id: 21146975 active listings: 43"
+1568394931.2046754,    ,"shop: mmecartier, id: 21145879 active listings: 59"
+1568394931.204711,    ,"shop: EnchantingRose, id: 21144935 active listings: 49"
+1568394931.204746,    ,"shop: ABNProductions, id: 21144837 active listings: 57"
+1568394931.2047808,    ,"shop: Scentsibly, id: 21143219 active listings: 50"
+1568394931.2048147,    , 
+1568394931.204848,    ,--save
+1568394931.2049031,    ,make ./data/shops_1568394931.csv
+1568394931.3102767,    ,"--'main, analyzer.py'"
+1568394931.3103912,    ,--get recent run
+1568394931.3104587,    ,timestamp: 1568394931
+1568394931.3105066,    ,"--get shops, pv_timestamp: 1568394931"
+1568394931.3122864,    ,"--word counter, shop_id: 21147631"
+1568394931.3128247,    ,"--word counter, shop_id: 21148095"
+1568394931.3131866,    ,"--word counter, shop_id: 21147421"
+1568394931.3132458,    ,"--word counter, shop_id: 21147377"
+1568394932.1164103,    ,API RESPONSE: 200
+1568394932.1189497,    ,API RESPONSE: 200
+1568394932.1190228,    ,API RESPONSE: 200
+1568394932.1242514,    ,"     Top Terms: [{'shop_id': '21147377'}, {'word': 'download/football/t-shirt', 'count': 50}, {'word': 'file/cut', 'count': 50}, {'word': 'file/cricut/cricut/vector', 'count': 50}, {'word': 'logo', 'count': 50}, {'word': 'download\ndigital', 'count': 25}]"
+1568394932.1937912,    ,"     Top Terms: [{'shop_id': '21147631'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568394932.203039,    ,"--word counter, shop_id: 21147303"
+1568394932.2031543,    ,"     Top Terms: [{'shop_id': '21147421'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568394932.2037687,    ,"--word counter, shop_id: 21146975"
+1568394932.2065802,    ,"--word counter, shop_id: 21145879"
+1568394932.4156046,    ,API RESPONSE: 200
+1568394932.4800642,    ,"     Top Terms: [{'shop_id': '21148095'}, {'word': 'to', 'count': 425}, {'word': 'the', 'count': 350}, {'word': 'you', 'count': 300}, {'word': 'and', 'count': 275}, {'word': 'or', 'count': 225}]"
+1568394932.4804826,    ,"--word counter, shop_id: 21144935"
+1568394933.0350692,    ,API RESPONSE: 200
+1568394933.0414946,    ,"     Top Terms: [{'shop_id': '21146975'}, {'word': 'vector', 'count': 100}, {'word': 'svg', 'count': 100}, {'word': 'football', 'count': 50}, {'word': 'file', 'count': 50}, {'word': 'digital', 'count': 50}]"
+1568394933.04186,    ,API RESPONSE: 200
+1568394933.042026,    ,API RESPONSE: 200
+1568394933.1111763,    ,"     Top Terms: [{'shop_id': '21147303'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568394933.1123018,    ,"     Top Terms: [{'shop_id': '21145879'}, {'word': 'and', 'count': 200}, {'word': 'svg', 'count': 163}, {'word': 'silhouette', 'count': 151}, {'word': 'for', 'count': 143}, {'word': 'cricut', 'count': 143}]"
+1568394933.1123335,    ,"--word counter, shop_id: 21144837"
+1568394933.1135287,    ,"--word counter, shop_id: 21143219"
+1568394933.3192046,    ,API RESPONSE: 200
+1568394933.3363013,    ,"     Top Terms: [{'shop_id': '21144935'}, {'word': 'files', 'count': 116}, {'word': 'svg', 'count': 100}, {'word': 'floss', 'count': 84}, {'word': 'download', 'count': 78}, {'word': 'to', 'count': 55}]"
+1568394933.8505712,    ,API RESPONSE: 200
+1568394933.8933294,    ,API RESPONSE: 200
+1568394933.9848812,    ,"     Top Terms: [{'shop_id': '21144837'}, {'word': 'and', 'count': 401}, {'word': 'to', 'count': 400}, {'word': 'for', 'count': 325}, {'word': 'i', 'count': 275}, {'word': 'a', 'count': 250}]"
+1568394934.0008976,    ,"     Top Terms: [{'shop_id': '21143219'}, {'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
+1568394934.0012646,    ,--read
+1568394934.0013213,    ,"[{'shop_id': '21148095'}, {'word': 'to', 'count': 425}, {'word': 'the', 'count': 350}, {'word': 'you', 'count': 300}, {'word': 'and', 'count': 275}, {'word': 'or', 'count': 225}]"
+1568394934.0013685,    ,"[{'shop_id': '21147631'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568394934.0014117,    ,"[{'shop_id': '21147421'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568394934.0014555,    ,"[{'shop_id': '21147377'}, {'word': 'download/football/t-shirt', 'count': 50}, {'word': 'file/cut', 'count': 50}, {'word': 'file/cricut/cricut/vector', 'count': 50}, {'word': 'logo', 'count': 50}, {'word': 'download\ndigital', 'count': 25}]"
+1568394934.0015001,    ,"[{'shop_id': '21147303'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568394934.001542,    ,"[{'shop_id': '21146975'}, {'word': 'vector', 'count': 100}, {'word': 'svg', 'count': 100}, {'word': 'football', 'count': 50}, {'word': 'file', 'count': 50}, {'word': 'digital', 'count': 50}]"
+1568394934.0015843,    ,"[{'shop_id': '21145879'}, {'word': 'and', 'count': 200}, {'word': 'svg', 'count': 163}, {'word': 'silhouette', 'count': 151}, {'word': 'for', 'count': 143}, {'word': 'cricut', 'count': 143}]"
+1568394934.001639,    ,"[{'shop_id': '21144935'}, {'word': 'files', 'count': 116}, {'word': 'svg', 'count': 100}, {'word': 'floss', 'count': 84}, {'word': 'download', 'count': 78}, {'word': 'to', 'count': 55}]"
+1568394934.0016816,    ,"[{'shop_id': '21144837'}, {'word': 'and', 'count': 401}, {'word': 'to', 'count': 400}, {'word': 'for', 'count': 325}, {'word': 'i', 'count': 275}, {'word': 'a', 'count': 250}]"
+1568394934.001722,    ,"[{'shop_id': '21143219'}, {'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
+1568394934.0017593,    ,--save
+1568394934.0017958,    ,make ./data/distribution_1568394934.csv
+1568395130.4541237,    ,"--'main, analyzer.py'"
+1568395130.454251,    ,--get recent run
+1568395130.4543116,    ,timestamp: 1568394931
+1568395130.4543636,    ,"--get shops, pv_timestamp: 1568394931"
+1568395130.4559586,    ,"--word counter, shop_id: 21148095"
+1568395130.4565024,    ,"--word counter, shop_id: 21147631"
+1568395130.4565578,    ,"--word counter, shop_id: 21147421"
+1568395130.4596272,    ,"--word counter, shop_id: 21147377"
+1568395131.7707562,    ,API RESPONSE: 200
+1568395131.7709818,    ,API RESPONSE: 200
+1568395131.777997,    ,API RESPONSE: 200
+1568395131.7941039,    ,"     Top Terms: [{'shop_id': '21147377'}, {'word': 'file/cut', 'count': 50}, {'word': 'file/cricut/cricut/vector', 'count': 50}, {'word': 'logo', 'count': 50}, {'word': 'download/football/t-shirt', 'count': 50}, {'word': 'you', 'count': 25}]"
+1568395131.8202124,    ,API RESPONSE: 200
+1568395131.8950417,    ,"--word counter, shop_id: 21147303"
+1568395131.8985255,    ,"     Top Terms: [{'shop_id': '21147421'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395131.8999755,    ,"     Top Terms: [{'shop_id': '21147631'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395131.926177,    ,"--word counter, shop_id: 21146975"
+1568395131.9263797,    ,"--word counter, shop_id: 21145879"
+1568395131.943332,    ,"     Top Terms: [{'shop_id': '21148095'}, {'word': 'to', 'count': 425}, {'word': 'the', 'count': 350}, {'word': 'you', 'count': 300}, {'word': 'and', 'count': 275}, {'word': 'or', 'count': 225}]"
+1568395131.9438348,    ,"--word counter, shop_id: 21144935"
+1568395132.8256874,    ,API RESPONSE: 200
+1568395132.8259873,    ,API RESPONSE: 200
+1568395132.8423064,    ,"     Top Terms: [{'shop_id': '21144935'}, {'word': 'files', 'count': 116}, {'word': 'svg', 'count': 100}, {'word': 'floss', 'count': 84}, {'word': 'download', 'count': 78}, {'word': 'to', 'count': 55}]"
+1568395132.8425272,    ,"     Top Terms: [{'shop_id': '21146975'}, {'word': 'vector', 'count': 100}, {'word': 'svg', 'count': 100}, {'word': 'digital', 'count': 50}, {'word': 'printable', 'count': 50}, {'word': 'cricut', 'count': 50}]"
+1568395132.8427832,    ,"--word counter, shop_id: 21144837"
+1568395132.8429706,    ,"--word counter, shop_id: 21143219"
+1568395132.845822,    ,API RESPONSE: 200
+1568395132.8882654,    ,"     Top Terms: [{'shop_id': '21147303'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395133.2279816,    ,API RESPONSE: 200
+1568395133.2600691,    ,"     Top Terms: [{'shop_id': '21145879'}, {'word': 'and', 'count': 200}, {'word': 'svg', 'count': 163}, {'word': 'silhouette', 'count': 151}, {'word': 'for', 'count': 143}, {'word': 'cricut', 'count': 143}]"
+1568395133.547085,    ,API RESPONSE: 200
+1568395133.620636,    ,"     Top Terms: [{'shop_id': '21144837'}, {'word': 'and', 'count': 401}, {'word': 'to', 'count': 400}, {'word': 'for', 'count': 325}, {'word': 'i', 'count': 275}, {'word': 'a', 'count': 250}]"
+1568395133.7494268,    ,API RESPONSE: 200
+1568395133.8205273,    ,"     Top Terms: [{'shop_id': '21143219'}, {'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
+1568395133.9103248,    ,--read
+1568395133.9104042,    ,"[{'shop_id': '21148095'}, {'word': 'to', 'count': 425}, {'word': 'the', 'count': 350}, {'word': 'you', 'count': 300}, {'word': 'and', 'count': 275}, {'word': 'or', 'count': 225}]"
+1568395133.9104617,    ,"[{'shop_id': '21147631'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395133.9105122,    ,"[{'shop_id': '21147421'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395133.9105625,    ,"[{'shop_id': '21147377'}, {'word': 'file/cut', 'count': 50}, {'word': 'file/cricut/cricut/vector', 'count': 50}, {'word': 'logo', 'count': 50}, {'word': 'download/football/t-shirt', 'count': 50}, {'word': 'you', 'count': 25}]"
+1568395133.9106128,    ,"[{'shop_id': '21147303'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395133.9106605,    ,"[{'shop_id': '21146975'}, {'word': 'vector', 'count': 100}, {'word': 'svg', 'count': 100}, {'word': 'digital', 'count': 50}, {'word': 'printable', 'count': 50}, {'word': 'cricut', 'count': 50}]"
+1568395133.91071,    ,"[{'shop_id': '21145879'}, {'word': 'and', 'count': 200}, {'word': 'svg', 'count': 163}, {'word': 'silhouette', 'count': 151}, {'word': 'for', 'count': 143}, {'word': 'cricut', 'count': 143}]"
+1568395133.9107575,    ,"[{'shop_id': '21144935'}, {'word': 'files', 'count': 116}, {'word': 'svg', 'count': 100}, {'word': 'floss', 'count': 84}, {'word': 'download', 'count': 78}, {'word': 'to', 'count': 55}]"
+1568395133.9108047,    ,"[{'shop_id': '21144837'}, {'word': 'and', 'count': 401}, {'word': 'to', 'count': 400}, {'word': 'for', 'count': 325}, {'word': 'i', 'count': 275}, {'word': 'a', 'count': 250}]"
+1568395133.910851,    ,"[{'shop_id': '21143219'}, {'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
+1568395133.9108932,    ,--save
+1568395133.910935,    ,make ./data/distribution_1568395133.csv
+1568396409.7443287,    ,"--'main, analyzer.py'"
+1568396409.7444625,    ,timestamp: 1568394931
+1568396409.7445173,    ,"--get shops, pv_timestamp: 1568394931"
+1568396409.7446103,    ,--threader
+1568396409.746144,    ,"--word counter, shop_id: 21148095"
+1568396409.7466197,    ,"--word counter, shop_id: 21147421"
+1568396409.7469888,    ,"--word counter, shop_id: 21147377"
+1568396409.7470446,    ,"--word counter, shop_id: 21147631"
+1568396410.9085786,    ,API RESPONSE: 200
+1568396410.9109373,    ,"     Top Terms: [{'shop_id': '21147377'}, {'word': 'file/cut', 'count': 50}, {'word': 'file/cricut/cricut/vector', 'count': 50}, {'word': 'logo', 'count': 50}, {'word': 'download/football/t-shirt', 'count': 50}, {'word': 'svghello!\n\nsvg/logo/vector/instant', 'count': 25}]"
+1568396410.9115348,    ,"--word counter, shop_id: 21147303"
+1568396410.9158208,    ,API RESPONSE: 200
+1568396410.9161606,    ,API RESPONSE: 200
+1568396411.0109875,    ,API RESPONSE: 200
+1568396411.0367072,    ,"     Top Terms: [{'shop_id': '21148095'}, {'word': 'to', 'count': 425}, {'word': 'the', 'count': 350}, {'word': 'you', 'count': 300}, {'word': 'and', 'count': 275}, {'word': 'or', 'count': 225}]"
+1568396411.0487585,    ,"     Top Terms: [{'shop_id': '21147631'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568396411.054213,    ,"--word counter, shop_id: 21146975"
+1568396411.064281,    ,"     Top Terms: [{'shop_id': '21147421'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568396411.064658,    ,"--word counter, shop_id: 21145879"
+1568396411.064745,    ,"--word counter, shop_id: 21144935"
+1568396411.822406,    ,API RESPONSE: 200
+1568396411.8699677,    ,"     Top Terms: [{'shop_id': '21147303'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568396411.870346,    ,"--word counter, shop_id: 21144837"
+1568396411.9554484,    ,API RESPONSE: 200
+1568396411.9595675,    ,"     Top Terms: [{'shop_id': '21146975'}, {'word': 'svg', 'count': 100}, {'word': 'vector', 'count': 100}, {'word': 'file', 'count': 50}, {'word': 'printable', 'count': 50}, {'word': 'clipart', 'count': 50}]"
+1568396411.959959,    ,"--word counter, shop_id: 21143219"
+1568396412.0181668,    ,API RESPONSE: 200
+1568396412.0503826,    ,"     Top Terms: [{'shop_id': '21145879'}, {'word': 'and', 'count': 200}, {'word': 'svg', 'count': 163}, {'word': 'silhouette', 'count': 151}, {'word': 'for', 'count': 143}, {'word': 'cricut', 'count': 143}]"
+1568396412.7570388,    ,API RESPONSE: 200
+1568396412.8376231,    ,"     Top Terms: [{'shop_id': '21144837'}, {'word': 'and', 'count': 401}, {'word': 'to', 'count': 400}, {'word': 'for', 'count': 325}, {'word': 'i', 'count': 275}, {'word': 'a', 'count': 250}]"
+1568396412.8393946,    ,API RESPONSE: 200
+1568396412.852102,    ,"     Top Terms: [{'shop_id': '21144935'}, {'word': 'files', 'count': 116}, {'word': 'svg', 'count': 100}, {'word': 'floss', 'count': 84}, {'word': 'download', 'count': 78}, {'word': 'to', 'count': 55}]"
+1568396412.8536325,    ,API RESPONSE: 200
+1568396412.9295123,    ,"     Top Terms: [{'shop_id': '21143219'}, {'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
+1568396412.978685,    ,--read
+1568396412.9788475,    ,"[{'shop_id': '21148095'}, {'word': 'to', 'count': 425}, {'word': 'the', 'count': 350}, {'word': 'you', 'count': 300}, {'word': 'and', 'count': 275}, {'word': 'or', 'count': 225}]"
+1568396412.9789789,    ,"[{'shop_id': '21147631'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568396412.979097,    ,"[{'shop_id': '21147421'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568396412.9792168,    ,"[{'shop_id': '21147377'}, {'word': 'file/cut', 'count': 50}, {'word': 'file/cricut/cricut/vector', 'count': 50}, {'word': 'logo', 'count': 50}, {'word': 'download/football/t-shirt', 'count': 50}, {'word': 'svghello!\n\nsvg/logo/vector/instant', 'count': 25}]"
+1568396412.9793391,    ,"[{'shop_id': '21147303'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568396412.9794526,    ,"[{'shop_id': '21146975'}, {'word': 'svg', 'count': 100}, {'word': 'vector', 'count': 100}, {'word': 'file', 'count': 50}, {'word': 'printable', 'count': 50}, {'word': 'clipart', 'count': 50}]"
+1568396412.9795656,    ,"[{'shop_id': '21145879'}, {'word': 'and', 'count': 200}, {'word': 'svg', 'count': 163}, {'word': 'silhouette', 'count': 151}, {'word': 'for', 'count': 143}, {'word': 'cricut', 'count': 143}]"
+1568396412.9797077,    ,"[{'shop_id': '21144935'}, {'word': 'files', 'count': 116}, {'word': 'svg', 'count': 100}, {'word': 'floss', 'count': 84}, {'word': 'download', 'count': 78}, {'word': 'to', 'count': 55}]"
+1568396412.97983,    ,"[{'shop_id': '21144837'}, {'word': 'and', 'count': 401}, {'word': 'to', 'count': 400}, {'word': 'for', 'count': 325}, {'word': 'i', 'count': 275}, {'word': 'a', 'count': 250}]"
+1568396412.9799402,    ,"[{'shop_id': '21143219'}, {'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
+1568396412.9800599,    ,--save
+1568396412.9801557,    ,make ./data/distribution_1568396412.csv

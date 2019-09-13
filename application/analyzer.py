@@ -1,7 +1,9 @@
 import os, csv, requests, json, time, sys
 import scraper, config
+from multiprocessing.dummy import Pool as ThreadPool
 
 def get_recent_run():
+    #find the most timestamp of shops added to the archive 
     scraper.pprint('--get recent run')
     files = os.listdir("./data")
     dates = []
@@ -21,6 +23,7 @@ def get_recent_run():
         return 0
 
 def get_shops(pv_timestamp, key):
+    #get the shop list from ./data/shops_'timestamp'
     scraper.pprint("--get shops, pv_timestamp: {}".format(pv_timestamp))
     lcl_path = "./data/shops_{}.csv".format(pv_timestamp)
     shops = []
@@ -35,6 +38,7 @@ def get_shops(pv_timestamp, key):
                     shop['id'] = row[1]
                     shop['name'] = row[2]
                     shop['listings'] = row[3]
+                    shop['key'] = key
                     shops.append(shop)
                 count+=1
         
@@ -46,10 +50,14 @@ def get_shops(pv_timestamp, key):
         shop['id'] = 0
         shop['name'] = "Error, FILE NOT FOUND"
         shop['listings'] = "0"
+        shop['key'] = key
         shops.append(shop)
         
     return shops
-def word_counter(shop_id, key):
+def word_counter(shop):
+    print("shop: {}".format(shop))
+    shop_id = shop['id']
+    key = shop['key']
     #returns a distribution chart of the 5 most common terms related to one shop
     scraper.pprint("--word counter, shop_id: {}".format(shop_id))
 
@@ -65,6 +73,7 @@ def word_counter(shop_id, key):
         d_content = content.decode("utf-8")
         content_json = json.loads(d_content)
         result_string = ''
+        #create string
         for result in content_json['results']:
             result_string+=str(result['title'])
             result_string+=str(result['description'])
@@ -82,11 +91,16 @@ def word_counter(shop_id, key):
             word_set.add(item)
             clean_words.append(item)
 
-
+        return_list = []
+        return_frame = {}
+        return_frame["shop_id"] = shop_id
+        return_list.append(return_frame)
         word_gram  = []
+        #use word set to build set of unique words
         for w_set in word_set:
             tmp_word = w_set
             count = 0
+            #count the occurances of the clean words
             for w_word in clean_words:
                 if w_set == w_word:
                     count+=1
@@ -97,7 +111,7 @@ def word_counter(shop_id, key):
 
         sorted_gram = sorted(word_gram, key = lambda i:i["count"], reverse=True)
 
-        return_list = []
+        
         r_count = 0
         for i in sorted_gram:
             if r_count < 5:
@@ -108,15 +122,16 @@ def word_counter(shop_id, key):
             if r_count ==config.term_count:
                 break
         scraper.pprint("     Top Terms: {}".format(return_list))
-        return return_list
+        
 
     else:
-        return_list = []
+        
         return_dict = {}
         return_dict["word"] = 'Error Code Status {}'.format(r_status)
         return_dict["count"] = 1
         return_list.append(return_dict)
-        return return_list
+    
+    return return_list
 
 def read(pv_list):
     scraper.pprint("--read")
@@ -142,11 +157,18 @@ def save(distributions, path):
             )
             lcl_id = 1
             for d in distributions:
-                lcl_list = [lcl_id, d['id'], d['distribution'], str(time.time())]     
-                writer.writerow(lcl_list)
+                count_f = {}
+                count_f['count'] = lcl_id
+                d.insert(0,count_f)    
+                writer.writerow(d)
                 lcl_id+=1    
 
-
+def threaded_counter(shops):
+    scraper.pprint('--threader')
+    pool = ThreadPool(4)
+    results = pool.map(word_counter, shops)
+    return results
+    
 def main():
     scraper.pprint("--'main, analyzer.py'")
     key = scraper.get_key()
@@ -160,12 +182,10 @@ def main():
     scraper.pprint('timestamp: {}'.format(timestamp))
     if not timestamp == 0:
         shops = get_shops(timestamp,key)
-        for shop in shops:
-            lcl_id = shop['id']          
-            lcl = {}
-            lcl['id'] = lcl_id
-            lcl['distribution'] = word_counter(lcl_id, key)
+        lcl_distributions = threaded_counter(shops)
+        for lcl in lcl_distributions:
             distributions.append(lcl)
+
         save(read(distributions), save_path)
     else:
         scraper.pprint("Please run 'scraper.py' first.")
