@@ -1,7 +1,8 @@
 import os,csv, requests, json, time
+import scraper
 
 def get_recent_run():
-    pprint('--get recent run')
+    scraper.pprint('--get recent run')
     files = os.listdir("./data")
     dates = []
     for f in files:
@@ -16,11 +17,11 @@ def get_recent_run():
         date = dates[0]
         return date
     except IndexError:
-        pprint('Data Folder is missing shop lists') 
+        scraper.pprint('Data Folder is missing shop lists') 
         return 0
 
-def get_shops(pv_timestamp):
-    pprint("--get shops, pv_timestamp: {}".format(pv_timestamp))
+def get_shops(pv_timestamp, key):
+    scraper.pprint("--get shops, pv_timestamp: {}".format(pv_timestamp))
     lcl_path = "./data/shops_{}.csv".format(pv_timestamp)
     shops = []
     with open(lcl_path, newline='') as csvfile:
@@ -37,16 +38,19 @@ def get_shops(pv_timestamp):
             count+=1
     return shops
 
-def word_counter(shop_id):
-    pprint("--word counter, shop_id: {}".format(shop_id))
-    url = "https://openapi.etsy.com/v2/shops/{}/listings/active?limit=25&offset=0&api_key=bvpvd0ns8aqk63229f9baz9u".format(shop_id)
+def word_counter(shop_id, key):
+    #returns a distribution chart of the 5 most common terms related to one shop
+    scraper.pprint("--word counter, shop_id: {}".format(shop_id))
+
+    #gather data
+    url = "https://openapi.etsy.com/v2/shops/{}/listings/active?limit=25&offset=0&api_key={}".format(shop_id, key)
     headers = {'user-agent': 'my-app/0.0.1'}
 
     r = requests.get(url, headers=headers)
     r_status=r.status_code
-    pprint("r status: {}".format(r_status))
+    scraper.pprint("r status: {}".format(r_status))
     if r_status == 200:
-        pprint('API RESPONSE: {}'.format(r))
+        scraper.pprint('API RESPONSE: {}'.format(r))
         content = r.content
         d_content = content.decode("utf-8")
         content_json = json.loads(d_content)
@@ -60,7 +64,8 @@ def word_counter(shop_id):
 
         word_set = set()
         clean_words = []
-
+        
+        #process data
         for item in result_list:
             item = item.strip(',')
             item = item.strip('.')
@@ -92,7 +97,7 @@ def word_counter(shop_id):
                     r_count+=1
             if r_count ==5:
                 break
-        pprint("     Top Terms: {}".format(return_list))
+        scraper.pprint("     Top Terms: {}".format(return_list))
         return return_list
     else:
         return_list = []
@@ -103,18 +108,18 @@ def word_counter(shop_id):
         return return_list
 
 def read(pv_list):
-    pprint("--read")
+    scraper.pprint("--read")
     for item in pv_list:
-        pprint(item)
+        scraper.pprint(item)
     return pv_list
 
 def save(distributions, path):
-    pprint("--save")
+    scraper.pprint("--save")
     s_t = '{}'.format(time.time())
     time_split = s_t.split('.')
     e = time_split[0]
     lcl_path = path+'_{}.csv'.format(e)
-    pprint('make {}'.format(lcl_path))
+    scraper.pprint('make {}'.format(lcl_path))
     with open(lcl_path, "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(
@@ -130,32 +135,24 @@ def save(distributions, path):
                 writer.writerow(lcl_list)
                 lcl_id+=1    
 
-def pprint(string):
-    print(string)
-    if not os.path.isdir("./data"):
-        os.makedirs("./data")
-    if not os.path.isfile("./data/logs.csv"):
-        os.system("touch ./data/logs.csv")
-    with open("./data/logs.csv","a", newline="") as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow([str(time.time()), string])
 
 def main():
-    pprint('--main, analyzer.py')
+    scraper.pprint('--main, analyzer.py')
     timestamp = get_recent_run()
-    pprint('timestamp: {}'.format(timestamp))
+    scraper.pprint('timestamp: {}'.format(timestamp))
     distributions = []
     save_path = './data/distribution'
+    key = scraper.get_key()
     if not timestamp == 0:
-        shops = get_shops(timestamp)
+        shops = get_shops(timestamp,key)
         for shop in shops:
             lcl_id = shop['id']          
             lcl = {}
             lcl['id'] = lcl_id
-            lcl['distribution'] = word_counter(lcl_id)
+            lcl['distribution'] = word_counter(lcl_id, key)
             distributions.append(lcl)
         save(read(distributions), save_path)
     else:
-        pprint("Please run 'scraper.py' first.")
+        scraper.pprint("Please run 'scraper.py' first.")
 if __name__ == "__main__":
     main()

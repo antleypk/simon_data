@@ -1,53 +1,101 @@
-1568340291.7620924,"--main, analyzer.py"
-1568340291.762207,--get recent run
-1568340291.76228,Data Folder is missing shop lists
-1568340291.7623258,timestamp: 0
-1568340291.762362,Please run 'scraper.py' first.
-1568340306.6834922,--main 'scraper.py
-1568340306.6835773,"--get shops, pv_count: 10, pv_listing_count 25"
-1568340310.4358897,"---- API response code: <Response [200]>, Limit: 50, Offset: 0"
-1568340310.4369273, 
-1568340317.6101356,"---- API response code: <Response [200]>, Limit: 100, Offset: 50"
-1568340317.6136546,"Shop ID: 21143715, Shop Name: INVIONPRINTABLE, Active Listings: 46, Count: 1"
-1568340317.6138542,"Shop ID: 21143219, Shop Name: Scentsibly, Active Listings: 50, Count: 2"
-1568340317.613998, 
-1568340324.1502287,"---- API response code: <Response [200]>, Limit: 150, Offset: 100"
-1568340324.152156,"Shop ID: 21142965, Shop Name: WoodenLifeStore, Active Listings: 37, Count: 3"
-1568340324.1522443, 
-1568340331.97312,"---- API response code: <Response [200]>, Limit: 200, Offset: 150"
-1568340331.9753416,"Shop ID: 21142331, Shop Name: AUPAPCORD, Active Listings: 34, Count: 4"
-1568340331.975481, 
-1568340337.3058279,"---- API response code: <Response [200]>, Limit: 250, Offset: 200"
-1568340337.3073359, 
-1568340341.9849215,"---- API response code: <Response [200]>, Limit: 300, Offset: 250"
-1568340341.9880483,"Shop ID: 21141491, Shop Name: NolaCaseUnitedStates, Active Listings: 52, Count: 5"
-1568340341.9881952, 
-1568340346.979355,"---- API response code: <Response [200]>, Limit: 350, Offset: 300"
-1568340346.9818754,"Shop ID: 21140651, Shop Name: BowutifulBowsDesign, Active Listings: 28, Count: 6"
-1568340346.982, 
-1568340351.974586,"---- API response code: <Response [200]>, Limit: 400, Offset: 350"
-1568340351.976471, 
-1568340356.9946613,"---- API response code: <Response [200]>, Limit: 450, Offset: 400"
-1568340356.997067, 
-1568340361.9919538,"---- API response code: <Response [200]>, Limit: 500, Offset: 450"
-1568340361.9951768,"Shop ID: 21139507, Shop Name: FREESIAInvitation, Active Listings: 81, Count: 7"
-1568340361.9953296,"Shop ID: 21139433, Shop Name: MartiWeddings, Active Listings: 30, Count: 8"
-1568340361.9954722, 
-1568340367.0088222,"---- API response code: <Response [200]>, Limit: 550, Offset: 500"
-1568340367.0119846,"Shop ID: 21139327, Shop Name: SimplyAwfulGifts, Active Listings: 32, Count: 9"
-1568340367.012145,"Shop ID: 21139109, Shop Name: HermesPatches, Active Listings: 58, Count: 10"
-1568340367.0122623, 
-1568340367.0123613, 
-1568340367.0125573,shop: INVIONPRINTABLE
-1568340367.0126665,shop: Scentsibly
-1568340367.0127623,shop: WoodenLifeStore
-1568340367.0128574,shop: AUPAPCORD
-1568340367.0129528,shop: NolaCaseUnitedStates
-1568340367.0130494,shop: BowutifulBowsDesign
-1568340367.013142,shop: FREESIAInvitation
-1568340367.013234,shop: MartiWeddings
-1568340367.0133245,shop: SimplyAwfulGifts
-1568340367.0134141,shop: HermesPatches
-1568340367.0135028, 
-1568340367.0135913,--save
-1568340367.0137336,make ./data/shops_1568340367.csv
+1568341961.5533864,"--main, analyzer.py"
+1568341961.553548,--get recent run
+1568341961.553652,Data Folder is missing shop lists
+1568341961.5537238,timestamp: 0
+1568341961.5538664,Please run 'scraper.py' first.
+1568342039.4871182,--main 'scraper.py
+1568342039.487272,"--get shops, pv_count: 10, pv_listing_count 25"
+1568342041.9730043,"---- API response code: <Response [200]>, Limit: 50, Offset: 0"
+1568342041.9750988, 
+1568342047.486043,"---- API response code: <Response [200]>, Limit: 100, Offset: 50"
+1568342047.4871528,"Shop ID: 21143715, Shop Name: INVIONPRINTABLE, Active Listings: 46, Count: 1"
+1568342047.4872127,"Shop ID: 21143219, Shop Name: Scentsibly, Active Listings: 50, Count: 2"
+1568342047.487255, 
+1568342052.5057306,"---- API response code: <Response [200]>, Limit: 150, Offset: 100"
+1568342052.5102615,"Shop ID: 21142965, Shop Name: WoodenLifeStore, Active Listings: 37, Count: 3"
+1568342052.510475, 
+1568342057.5381482,"---- API response code: <Response [200]>, Limit: 200, Offset: 150"
+1568342057.5393815,"Shop ID: 21142331, Shop Name: AUPAPCORD, Active Listings: 34, Count: 4"
+1568342057.539437, 
+1568342062.48908,"---- API response code: <Response [200]>, Limit: 250, Offset: 200"
+1568342062.4908926, 
+1568342067.6118436,"---- API response code: <Response [200]>, Limit: 300, Offset: 250"
+1568342067.6146479,"Shop ID: 21141491, Shop Name: NolaCaseUnitedStates, Active Listings: 52, Count: 5"
+1568342067.6147027, 
+1568342071.9735417,"---- API response code: <Response [200]>, Limit: 350, Offset: 300"
+1568342071.9751508, 
+1568342076.8337564,"---- API response code: <Response [200]>, Limit: 400, Offset: 350"
+1568342076.8362641,"Shop ID: 21140651, Shop Name: BowutifulBowsDesign, Active Listings: 28, Count: 6"
+1568342076.8363907, 
+1568342081.9866295,"---- API response code: <Response [200]>, Limit: 450, Offset: 400"
+1568342081.9900625, 
+1568342087.6205335,"---- API response code: <Response [200]>, Limit: 500, Offset: 450"
+1568342087.6225407,"Shop ID: 21139507, Shop Name: FREESIAInvitation, Active Listings: 81, Count: 7"
+1568342087.6226466, 
+1568342091.9819376,"---- API response code: <Response [200]>, Limit: 550, Offset: 500"
+1568342091.984125,"Shop ID: 21139433, Shop Name: MartiWeddings, Active Listings: 30, Count: 8"
+1568342091.9842548,"Shop ID: 21139327, Shop Name: SimplyAwfulGifts, Active Listings: 32, Count: 9"
+1568342091.9843674,"Shop ID: 21139109, Shop Name: HermesPatches, Active Listings: 58, Count: 10"
+1568342091.9844582, 
+1568342091.9845402, 
+1568342091.984731,shop: INVIONPRINTABLE
+1568342091.9848425,shop: Scentsibly
+1568342091.984951,shop: WoodenLifeStore
+1568342091.985058,shop: AUPAPCORD
+1568342091.9851646,shop: NolaCaseUnitedStates
+1568342091.985268,shop: BowutifulBowsDesign
+1568342091.9853716,shop: FREESIAInvitation
+1568342091.9854774,shop: MartiWeddings
+1568342091.9855814,shop: SimplyAwfulGifts
+1568342091.9856856,shop: HermesPatches
+1568342091.9857872, 
+1568342091.9858882,--save
+1568342091.986047,make ./data/shops_1568342091.csv
+1568342210.235479,--main 'scraper.py
+1568342210.2356195,"--get shops, pv_count: 10, pv_listing_count 25"
+1568342217.6082792,"---- API response code: <Response [200]>, Limit: 50, Offset: 0"
+1568342217.6096451, 
+1568342221.973148,"---- API response code: <Response [200]>, Limit: 100, Offset: 50"
+1568342221.9749453,"Shop ID: 21143715, Shop Name: INVIONPRINTABLE, Active Listings: 46, Count: 1"
+1568342221.9750235,"Shop ID: 21143219, Shop Name: Scentsibly, Active Listings: 50, Count: 2"
+1568342221.9750714, 
+1568342226.1492367,"---- API response code: <Response [200]>, Limit: 150, Offset: 100"
+1568342226.153079,"Shop ID: 21142965, Shop Name: WoodenLifeStore, Active Listings: 37, Count: 3"
+1568342226.153249, 
+1568342231.1675901,"---- API response code: <Response [200]>, Limit: 200, Offset: 150"
+1568342231.1708548,"Shop ID: 21142331, Shop Name: AUPAPCORD, Active Listings: 34, Count: 4"
+1568342231.1710472, 
+1568342235.2383966,"---- API response code: <Response [200]>, Limit: 250, Offset: 200"
+1568342235.2407475, 
+1568342239.0366611,"---- API response code: <Response [200]>, Limit: 300, Offset: 250"
+1568342239.0391824,"Shop ID: 21141491, Shop Name: NolaCaseUnitedStates, Active Listings: 52, Count: 5"
+1568342239.0392916, 
+1568342246.1905808,"---- API response code: <Response [200]>, Limit: 350, Offset: 300"
+1568342246.1943846, 
+1568342251.1786177,"---- API response code: <Response [200]>, Limit: 400, Offset: 350"
+1568342251.1801875,"Shop ID: 21140651, Shop Name: BowutifulBowsDesign, Active Listings: 28, Count: 6"
+1568342251.1802607, 
+1568342255.009776,"---- API response code: <Response [200]>, Limit: 450, Offset: 400"
+1568342255.0123312, 
+1568342259.1069922,"---- API response code: <Response [200]>, Limit: 500, Offset: 450"
+1568342259.110018,"Shop ID: 21139507, Shop Name: FREESIAInvitation, Active Listings: 81, Count: 7"
+1568342259.1101801, 
+1568342262.5198934,"---- API response code: <Response [200]>, Limit: 550, Offset: 500"
+1568342262.5228174,"Shop ID: 21139433, Shop Name: MartiWeddings, Active Listings: 30, Count: 8"
+1568342262.5229576,"Shop ID: 21139327, Shop Name: SimplyAwfulGifts, Active Listings: 32, Count: 9"
+1568342262.5230918,"Shop ID: 21139109, Shop Name: HermesPatches, Active Listings: 58, Count: 10"
+1568342262.5231915, 
+1568342262.5232804, 
+1568342262.5234582,"shop: INVIONPRINTABLE, Active Listings: 46"
+1568342262.5235639,"shop: Scentsibly, Active Listings: 50"
+1568342262.5236557,"shop: WoodenLifeStore, Active Listings: 37"
+1568342262.5237455,"shop: AUPAPCORD, Active Listings: 34"
+1568342262.5238338,"shop: NolaCaseUnitedStates, Active Listings: 52"
+1568342262.5239213,"shop: BowutifulBowsDesign, Active Listings: 28"
+1568342262.524007,"shop: FREESIAInvitation, Active Listings: 81"
+1568342262.5240932,"shop: MartiWeddings, Active Listings: 30"
+1568342262.5241804,"shop: SimplyAwfulGifts, Active Listings: 32"
+1568342262.5242662,"shop: HermesPatches, Active Listings: 58"
+1568342262.524349, 
+1568342262.5244324,--save
+1568342262.5246027,make ./data/shops_1568342262.csv
