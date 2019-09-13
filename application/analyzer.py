@@ -163,7 +163,7 @@ def save(distributions, path):
                 writer.writerow(d)
                 lcl_id+=1    
 
-def threader(shops):
+def threaded_counter(shops):
     scraper.pprint('--threader')
     pool = ThreadPool(4)
     results = pool.map(word_counter, shops)
@@ -182,7 +182,7 @@ def main():
     scraper.pprint('timestamp: {}'.format(timestamp))
     if not timestamp == 0:
         shops = get_shops(timestamp,key)
-        lcl_distributions = threader(shops)
+        lcl_distributions = threaded_counter(shops)
         for lcl in lcl_distributions:
             distributions.append(lcl)
 

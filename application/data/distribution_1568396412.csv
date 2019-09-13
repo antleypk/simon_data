@@ -1,0 +1,11 @@
+id,shop_id,e_time
+{'count': 1},{'shop_id': '21148095'},"{'word': 'to', 'count': 425}","{'word': 'the', 'count': 350}","{'word': 'you', 'count': 300}","{'word': 'and', 'count': 275}","{'word': 'or', 'count': 225}"
+{'count': 2},{'shop_id': '21147631'},"{'word': 'to', 'count': 325}","{'word': 'you', 'count': 300}","{'word': 'for', 'count': 250}","{'word': 'or', 'count': 200}","{'word': 'the', 'count': 200}"
+{'count': 3},{'shop_id': '21147421'},"{'word': 'to', 'count': 325}","{'word': 'you', 'count': 300}","{'word': 'for', 'count': 250}","{'word': 'or', 'count': 200}","{'word': 'the', 'count': 200}"
+{'count': 4},{'shop_id': '21147377'},"{'word': 'file/cut', 'count': 50}","{'word': 'file/cricut/cricut/vector', 'count': 50}","{'word': 'logo', 'count': 50}","{'word': 'download/football/t-shirt', 'count': 50}","{'word': 'svghello!\n\nsvg/logo/vector/instant', 'count': 25}"
+{'count': 5},{'shop_id': '21147303'},"{'word': 'to', 'count': 325}","{'word': 'you', 'count': 300}","{'word': 'for', 'count': 250}","{'word': 'or', 'count': 200}","{'word': 'the', 'count': 200}"
+{'count': 6},{'shop_id': '21146975'},"{'word': 'svg', 'count': 100}","{'word': 'vector', 'count': 100}","{'word': 'file', 'count': 50}","{'word': 'printable', 'count': 50}","{'word': 'clipart', 'count': 50}"
+{'count': 7},{'shop_id': '21145879'},"{'word': 'and', 'count': 200}","{'word': 'svg', 'count': 163}","{'word': 'silhouette', 'count': 151}","{'word': 'for', 'count': 143}","{'word': 'cricut', 'count': 143}"
+{'count': 8},{'shop_id': '21144935'},"{'word': 'files', 'count': 116}","{'word': 'svg', 'count': 100}","{'word': 'floss', 'count': 84}","{'word': 'download', 'count': 78}","{'word': 'to', 'count': 55}"
+{'count': 9},{'shop_id': '21144837'},"{'word': 'and', 'count': 401}","{'word': 'to', 'count': 400}","{'word': 'for', 'count': 325}","{'word': 'i', 'count': 275}","{'word': 'a', 'count': 250}"
+{'count': 10},{'shop_id': '21143219'},"{'word': 'the', 'count': 246}","{'word': 'and', 'count': 185}","{'word': 'of', 'count': 168}","{'word': 'a', 'count': 129}","{'word': 'sample', 'count': 125}"
