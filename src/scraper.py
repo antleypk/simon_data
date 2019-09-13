@@ -20,12 +20,7 @@ def get_shops(pv_count, pv_listing_count, key):
         content = r.content
         d_content = content.decode("utf-8")
         content_json = json.loads(d_content)
-        content_keys = content_json.keys()
-        results = content_json['results']
-        result = results[0]
-        result_keys = result.keys()       
-
-        for r in results:
+        for r in content_json['results']:
             if r['listing_active_count'] > pv_listing_count:
                 lcl_id = r['shop_id']
                 if not lcl_id in store_ids:

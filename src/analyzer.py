@@ -64,14 +64,10 @@ def word_counter(shop_id, key):
         content = r.content
         d_content = content.decode("utf-8")
         content_json = json.loads(d_content)
-        results = content_json['results']
-
         result_string = ''
-        for result in results:
+        for result in content_json['results']:
             result_string+=str(result['title'])
             result_string+=str(result['description'])
-        
-        
         
         result_list = result_string.lower().split(' ')
 
@@ -106,12 +102,14 @@ def word_counter(shop_id, key):
         for i in sorted_gram:
             if r_count < 5:
                 if not i["word"] == '':
-                    return_list.append(i)
-                    r_count+=1
+                    if not i["word"] == '–':
+                        return_list.append(i)
+                        r_count+=1
             if r_count ==5:
                 break
         scraper.pprint("     Top Terms: {}".format(return_list))
         return return_list
+
     else:
         return_list = []
         return_dict = {}
