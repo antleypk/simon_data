@@ -2,7 +2,7 @@ Welcome to the etsy store analyzer v1.1.1
 
 To operate the application, first clone the repo.
 
-After cloning the repo navigate to src folder.
+After cloning the repo navigate to application folder.
 
 Once in the src folder, execute 'app.sh' -> "you@yourmachine$ ./app.sh"
 
