@@ -1,3 +1,0 @@
-app name: antleypk_demo
-KEYSTRING bvpvd0ns8aqk63229f9baz9u
-SHARED SECRET9fh7jwaqyr
