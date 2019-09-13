@@ -89,7 +89,7 @@ def get_key():
         return key
 
 def main():
-    pprint("--main 'scraper.py")
+    pprint("--main 'scraper.py'")
     shop_count = 10
     min_active_listing = 25
     save_path = './data/shops'

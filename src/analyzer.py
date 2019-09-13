@@ -1,4 +1,4 @@
-import os,csv, requests, json, time
+import os, csv, requests, json, time, sys
 import scraper
 
 def get_recent_run():
@@ -24,20 +24,30 @@ def get_shops(pv_timestamp, key):
     scraper.pprint("--get shops, pv_timestamp: {}".format(pv_timestamp))
     lcl_path = "./data/shops_{}.csv".format(pv_timestamp)
     shops = []
-    with open(lcl_path, newline='') as csvfile:
-        reader = csv.reader(csvfile, delimiter=',', quotechar='|')
-        count = 0
-        for row in reader:
-            shop = {}
-            if count > 0:
-                shop['count'] = row[0]
-                shop['id'] = row[1]
-                shop['name'] = row[2]
-                shop['listings'] = row[3]
-                shops.append(shop)
-            count+=1
+    try:
+        with open(lcl_path, newline='') as csvfile:
+            reader = csv.reader(csvfile, delimiter=',', quotechar='|')
+            count = 0
+            for row in reader:
+                shop = {}
+                if count > 0:
+                    shop['count'] = row[0]
+                    shop['id'] = row[1]
+                    shop['name'] = row[2]
+                    shop['listings'] = row[3]
+                    shops.append(shop)
+                count+=1
+        
+    except FileNotFoundError:
+        scraper.pprint("FILE NOT FOUND ERROR!! Did you provide an incorrect timestamp?")
+        scraper.pprint(" ")
+        shop = {}
+        shop['count'] = 0
+        shop['id'] = 0
+        shop['name'] = "Error, FILE NOT FOUND"
+        shop['listings'] = "0"
+        shops.append(shop)
     return shops
-
 def word_counter(shop_id, key):
     #returns a distribution chart of the 5 most common terms related to one shop
     scraper.pprint("--word counter, shop_id: {}".format(shop_id))
@@ -137,12 +147,16 @@ def save(distributions, path):
 
 
 def main():
-    scraper.pprint('--main, analyzer.py')
-    timestamp = get_recent_run()
-    scraper.pprint('timestamp: {}'.format(timestamp))
+    scraper.pprint("--'main, analyzer.py'")
+    key = scraper.get_key()
     distributions = []
     save_path = './data/distribution'
-    key = scraper.get_key()
+    arg_length = len(sys.argv)
+    if not arg_length == 2:
+        timestamp = get_recent_run()
+    if arg_length == 2:
+        timestamp = sys.argv[1]
+    scraper.pprint('timestamp: {}'.format(timestamp))
     if not timestamp == 0:
         shops = get_shops(timestamp,key)
         for shop in shops:
@@ -154,5 +168,6 @@ def main():
         save(read(distributions), save_path)
     else:
         scraper.pprint("Please run 'scraper.py' first.")
+
 if __name__ == "__main__":
     main()

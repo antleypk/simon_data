@@ -1,0 +1,11 @@
+id,shop_id,e_time
+1,21143715,"[{'word': 'to', 'count': 13}, {'word': 'you', 'count': 12}, {'word': 'for', 'count': 10}, {'word': 'or', 'count': 9}, {'word': 'the', 'count': 8}]",1568343924.8540018
+2,21143219,"[{'word': 'the', 'count': 12}, {'word': 'and', 'count': 7}, {'word': 'of', 'count': 6}, {'word': 'is', 'count': 5}, {'word': 'sample', 'count': 5}]",1568343924.8540242
+3,21142965,"[{'word': 'the', 'count': 7}, {'word': 'wood', 'count': 3}, {'word': 'handmade', 'count': 3}, {'word': 'models', 'count': 2}, {'word': 'special', 'count': 2}]",1568343924.8540373
+4,21142331,"[{'word': 'casual', 'count': 4}, {'word': 'jacket', 'count': 3}, {'word': 'men', 'count': 3}, {'word': 'spring', 'count': 2}, {'word': 'you', 'count': 2}]",1568343924.854052
+5,21141491,"[{'word': '–', 'count': 6}, {'word': 'to', 'count': 6}, {'word': 'wood', 'count': 4}, {'word': 'phone', 'count': 4}, {'word': 'samsung', 'count': 3}]",1568343924.8540654
+6,21140651,"[{'word': 'police', 'count': 1}, {'word': 'bow', 'count': 1}, {'word': 'double', 'count': 1}, {'word': 'bow4in', 'count': 1}]",1568343924.8540845
+7,21139507,"[{'word': 'to', 'count': 13}, {'word': 'you', 'count': 12}, {'word': 'for', 'count': 10}, {'word': 'or', 'count': 8}, {'word': 'the', 'count': 8}]",1568343924.8540945
+8,21139433,"[{'word': 'the', 'count': 7}, {'word': 'to', 'count': 5}, {'word': 'bag', 'count': 3}, {'word': 'for', 'count': 3}, {'word': 'your', 'count': 3}]",1568343924.8541076
+9,21139327,"[{'word': 'a', 'count': 4}, {'word': 'with', 'count': 3}, {'word': 'and', 'count': 3}, {'word': 'sports', 'count': 2}, {'word': 'keeping', 'count': 1}]",1568343924.854119
+10,21139109,"[{'word': 'the', 'count': 7}, {'word': 'on', 'count': 5}, {'word': 'logo', 'count': 4}, {'word': 'iron', 'count': 4}, {'word': 'bussiness', 'count': 3}]",1568343924.8541288
