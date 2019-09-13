@@ -15,11 +15,23 @@
 #mkdir explore
 #cd explore
 
-cd ..
-cd ..
+# cd ..
+# cd ..
 
+# mv bash_log.sh simon_data/bash_log.sh
 
+# git add .
+# git commit -m 'add the setup to repo'
+# git push
 
-git add .
-git commit -m 'add the setup to repo'
-git push
+# cd explore
+
+# touch keys.txt
+# touch explorer.py
+
+#cd ..
+#mkdir src
+# cd src
+# touch company_scraper.py
+# code company_scraper.py
+#mkdir data
