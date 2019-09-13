@@ -343,3 +343,60 @@
 1568344371.9783993,"{'id': '21139109', 'distribution': [{'word': 'the', 'count': 7}, {'word': 'on', 'count': 5}, {'word': 'iron', 'count': 4}, {'word': 'logo', 'count': 4}, {'word': 'cowboys', 'count': 3}]}"
 1568344371.9784768,--save
 1568344371.9785483,make ./data/distribution_1568344371.csv
+1568344845.31965,"--'main, analyzer.py'"
+1568344845.31983,--get recent run
+1568344845.3199275,timestamp: 1568344000
+1568344845.319997,"--get shops, pv_timestamp: 1568344000"
+1568344845.3201494,"--word counter, shop_id: 21143715"
+1568344846.455786,r status: 200
+1568344846.4559062,API RESPONSE: <Response [200]>
+1568344846.4981103,"     Top Terms: [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 225}, {'word': 'the', 'count': 200}]"
+1568344846.4983833,"--word counter, shop_id: 21143219"
+1568344847.610435,r status: 200
+1568344847.6105146,API RESPONSE: <Response [200]>
+1568344847.6820908,"     Top Terms: [{'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
+1568344847.6822987,"--word counter, shop_id: 21142965"
+1568344849.8160975,r status: 200
+1568344849.8164022,API RESPONSE: <Response [200]>
+1568344849.8276114,"     Top Terms: [{'word': 'the', 'count': 175}, {'word': 'wood', 'count': 75}, {'word': 'handmade', 'count': 75}, {'word': 'boat', 'count': 54}, {'word': 'models', 'count': 50}]"
+1568344849.8278508,"--word counter, shop_id: 21142331"
+1568344851.4622893,r status: 200
+1568344851.4624043,API RESPONSE: <Response [200]>
+1568344851.4790194,"     Top Terms: [{'word': 'to', 'count': 59}, {'word': 'for', 'count': 51}, {'word': 'you', 'count': 51}, {'word': 'jacket', 'count': 46}, {'word': 'of', 'count': 41}]"
+1568344851.4792912,"--word counter, shop_id: 21141491"
+1568344852.9714637,r status: 200
+1568344852.9716358,API RESPONSE: <Response [200]>
+1568344852.990746,"     Top Terms: [{'word': '–', 'count': 150}, {'word': 'to', 'count': 150}, {'word': 'wood', 'count': 100}, {'word': 'phone', 'count': 100}, {'word': 'and', 'count': 75}]"
+1568344852.9911466,"--word counter, shop_id: 21140651"
+1568344853.9700303,r status: 200
+1568344853.9701607,API RESPONSE: <Response [200]>
+1568344853.9713943,"     Top Terms: [{'word': 'bow4in', 'count': 16}, {'word': 'double', 'count': 6}, {'word': 'bows4in', 'count': 5}, {'word': 'layer', 'count': 5}, {'word': 'with', 'count': 4}]"
+1568344853.971638,"--word counter, shop_id: 21139507"
+1568344856.4762893,r status: 200
+1568344856.4765227,API RESPONSE: <Response [200]>
+1568344856.5180266,"     Top Terms: [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568344856.5183287,"--word counter, shop_id: 21139433"
+1568344857.6075697,r status: 200
+1568344857.607702,API RESPONSE: <Response [200]>
+1568344857.6337035,"     Top Terms: [{'word': 'the', 'count': 123}, {'word': 'to', 'count': 121}, {'word': 'in', 'count': 75}, {'word': 'your', 'count': 63}, {'word': 'and', 'count': 63}]"
+1568344857.6339355,"--word counter, shop_id: 21139327"
+1568344860.5078435,r status: 200
+1568344860.5079026,API RESPONSE: <Response [200]>
+1568344860.5096552,"     Top Terms: [{'word': 'glossy', 'count': 46}, {'word': 'mug', 'count': 25}, {'word': 'white', 'count': 25}, {'word': '11oz', 'count': 25}, {'word': 'dishwasher', 'count': 23}]"
+1568344860.5097616,"--word counter, shop_id: 21139109"
+1568344861.484658,r status: 200
+1568344861.4848096,API RESPONSE: <Response [200]>
+1568344861.5039768,"     Top Terms: [{'word': 'the', 'count': 175}, {'word': 'on', 'count': 125}, {'word': 'iron', 'count': 100}, {'word': 'logo', 'count': 90}, {'word': 'bussiness', 'count': 75}]"
+1568344861.5043662,--read
+1568344861.5044336,"{'id': '21143715', 'distribution': [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 225}, {'word': 'the', 'count': 200}]}"
+1568344861.5045087,"{'id': '21143219', 'distribution': [{'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]}"
+1568344861.5045726,"{'id': '21142965', 'distribution': [{'word': 'the', 'count': 175}, {'word': 'wood', 'count': 75}, {'word': 'handmade', 'count': 75}, {'word': 'boat', 'count': 54}, {'word': 'models', 'count': 50}]}"
+1568344861.50463,"{'id': '21142331', 'distribution': [{'word': 'to', 'count': 59}, {'word': 'for', 'count': 51}, {'word': 'you', 'count': 51}, {'word': 'jacket', 'count': 46}, {'word': 'of', 'count': 41}]}"
+1568344861.504689,"{'id': '21141491', 'distribution': [{'word': '–', 'count': 150}, {'word': 'to', 'count': 150}, {'word': 'wood', 'count': 100}, {'word': 'phone', 'count': 100}, {'word': 'and', 'count': 75}]}"
+1568344861.5047839,"{'id': '21140651', 'distribution': [{'word': 'bow4in', 'count': 16}, {'word': 'double', 'count': 6}, {'word': 'bows4in', 'count': 5}, {'word': 'layer', 'count': 5}, {'word': 'with', 'count': 4}]}"
+1568344861.504833,"{'id': '21139507', 'distribution': [{'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]}"
+1568344861.504899,"{'id': '21139433', 'distribution': [{'word': 'the', 'count': 123}, {'word': 'to', 'count': 121}, {'word': 'in', 'count': 75}, {'word': 'your', 'count': 63}, {'word': 'and', 'count': 63}]}"
+1568344861.504956,"{'id': '21139327', 'distribution': [{'word': 'glossy', 'count': 46}, {'word': 'mug', 'count': 25}, {'word': 'white', 'count': 25}, {'word': '11oz', 'count': 25}, {'word': 'dishwasher', 'count': 23}]}"
+1568344861.5050087,"{'id': '21139109', 'distribution': [{'word': 'the', 'count': 175}, {'word': 'on', 'count': 125}, {'word': 'iron', 'count': 100}, {'word': 'logo', 'count': 90}, {'word': 'bussiness', 'count': 75}]}"
+1568344861.5050614,--save
+1568344861.5051064,make ./data/distribution_1568344861.csv

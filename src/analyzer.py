@@ -65,11 +65,14 @@ def word_counter(shop_id, key):
         d_content = content.decode("utf-8")
         content_json = json.loads(d_content)
         results = content_json['results']
-        result = results[0]
-        result_keys = result.keys()
+
         result_string = ''
-        result_string+=str(result['title'])
-        result_string+=str(result['description'])
+        for result in results:
+            result_string+=str(result['title'])
+            result_string+=str(result['description'])
+        
+        
+        
         result_list = result_string.lower().split(' ')
 
         word_set = set()
