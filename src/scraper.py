@@ -1,6 +1,9 @@
 import requests, json, csv, os, time
 
 def get_shops(pv_count, pv_listing_count, key):
+    #get shops returns a configureable amount of stores, pv_count
+    #the stores must have at least as many listings as pv_listing_count
+    #the api shared key must be passed to complete transaction
     pprint("--get shops, pv_count: {}, pv_listing_count {}".format(pv_count, pv_listing_count))
     state = True
     limit = 50
@@ -41,6 +44,7 @@ def get_shops(pv_count, pv_listing_count, key):
 
 
 def save(shops, path):
+    #saves the list of shops to the passed path
     pprint("--save")
     s_t = '{}'.format(time.time())
     time_split = s_t.split('.')
@@ -66,6 +70,7 @@ def save(shops, path):
                     lcl_id+=1
 
 def pprint(string):
+    #prints and logs print statements
     print(string)
     if not os.path.isdir("./data"):
         os.makedirs("./data")
@@ -76,6 +81,7 @@ def pprint(string):
         writer.writerow([str(time.time()), string])
 
 def get_key():
+    #gets key from .gitignored file
     print('--get key')
     with open("./secret.key") as f:
         key = f.readline()
