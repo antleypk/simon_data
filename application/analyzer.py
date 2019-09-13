@@ -3,6 +3,7 @@ import scraper, config
 from multiprocessing.dummy import Pool as ThreadPool
 
 def get_recent_run():
+    #find the most timestamp of shops added to the archive 
     scraper.pprint('--get recent run')
     files = os.listdir("./data")
     dates = []
@@ -22,6 +23,7 @@ def get_recent_run():
         return 0
 
 def get_shops(pv_timestamp, key):
+    #get the shop list from ./data/shops_'timestamp'
     scraper.pprint("--get shops, pv_timestamp: {}".format(pv_timestamp))
     lcl_path = "./data/shops_{}.csv".format(pv_timestamp)
     shops = []
@@ -71,6 +73,7 @@ def word_counter(shop):
         d_content = content.decode("utf-8")
         content_json = json.loads(d_content)
         result_string = ''
+        #create string
         for result in content_json['results']:
             result_string+=str(result['title'])
             result_string+=str(result['description'])
@@ -93,9 +96,11 @@ def word_counter(shop):
         return_frame["shop_id"] = shop_id
         return_list.append(return_frame)
         word_gram  = []
+        #use word set to build set of unique words
         for w_set in word_set:
             tmp_word = w_set
             count = 0
+            #count the occurances of the clean words
             for w_word in clean_words:
                 if w_set == w_word:
                     count+=1
@@ -154,13 +159,12 @@ def save(distributions, path):
             for d in distributions:
                 count_f = {}
                 count_f['count'] = lcl_id
-                d.insert(0,count_f)
-                print('d: {}'.format(d))
-                #lcl_list = [lcl_id, d['id'], d['distribution'], str(time.time())]     
+                d.insert(0,count_f)    
                 writer.writerow(d)
                 lcl_id+=1    
 
 def threader(shops):
+    scraper.pprint('--threader')
     pool = ThreadPool(4)
     results = pool.map(word_counter, shops)
     return results
@@ -181,13 +185,6 @@ def main():
         lcl_distributions = threader(shops)
         for lcl in lcl_distributions:
             distributions.append(lcl)
-        
-        # for shop in shops:
-        #     lcl_id = shop['id']          
-        #     lcl = {}
-        #     lcl['id'] = lcl_id
-        #     lcl['distribution'] = word_counter(lcl_id, key)
-        #     distributions.append(lcl)
 
         save(read(distributions), save_path)
     else:

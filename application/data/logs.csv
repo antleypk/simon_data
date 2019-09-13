@@ -91,3 +91,50 @@
 1568394934.001722,    ,"[{'shop_id': '21143219'}, {'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
 1568394934.0017593,    ,--save
 1568394934.0017958,    ,make ./data/distribution_1568394934.csv
+1568395130.4541237,    ,"--'main, analyzer.py'"
+1568395130.454251,    ,--get recent run
+1568395130.4543116,    ,timestamp: 1568394931
+1568395130.4543636,    ,"--get shops, pv_timestamp: 1568394931"
+1568395130.4559586,    ,"--word counter, shop_id: 21148095"
+1568395130.4565024,    ,"--word counter, shop_id: 21147631"
+1568395130.4565578,    ,"--word counter, shop_id: 21147421"
+1568395130.4596272,    ,"--word counter, shop_id: 21147377"
+1568395131.7707562,    ,API RESPONSE: 200
+1568395131.7709818,    ,API RESPONSE: 200
+1568395131.777997,    ,API RESPONSE: 200
+1568395131.7941039,    ,"     Top Terms: [{'shop_id': '21147377'}, {'word': 'file/cut', 'count': 50}, {'word': 'file/cricut/cricut/vector', 'count': 50}, {'word': 'logo', 'count': 50}, {'word': 'download/football/t-shirt', 'count': 50}, {'word': 'you', 'count': 25}]"
+1568395131.8202124,    ,API RESPONSE: 200
+1568395131.8950417,    ,"--word counter, shop_id: 21147303"
+1568395131.8985255,    ,"     Top Terms: [{'shop_id': '21147421'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395131.8999755,    ,"     Top Terms: [{'shop_id': '21147631'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395131.926177,    ,"--word counter, shop_id: 21146975"
+1568395131.9263797,    ,"--word counter, shop_id: 21145879"
+1568395131.943332,    ,"     Top Terms: [{'shop_id': '21148095'}, {'word': 'to', 'count': 425}, {'word': 'the', 'count': 350}, {'word': 'you', 'count': 300}, {'word': 'and', 'count': 275}, {'word': 'or', 'count': 225}]"
+1568395131.9438348,    ,"--word counter, shop_id: 21144935"
+1568395132.8256874,    ,API RESPONSE: 200
+1568395132.8259873,    ,API RESPONSE: 200
+1568395132.8423064,    ,"     Top Terms: [{'shop_id': '21144935'}, {'word': 'files', 'count': 116}, {'word': 'svg', 'count': 100}, {'word': 'floss', 'count': 84}, {'word': 'download', 'count': 78}, {'word': 'to', 'count': 55}]"
+1568395132.8425272,    ,"     Top Terms: [{'shop_id': '21146975'}, {'word': 'vector', 'count': 100}, {'word': 'svg', 'count': 100}, {'word': 'digital', 'count': 50}, {'word': 'printable', 'count': 50}, {'word': 'cricut', 'count': 50}]"
+1568395132.8427832,    ,"--word counter, shop_id: 21144837"
+1568395132.8429706,    ,"--word counter, shop_id: 21143219"
+1568395132.845822,    ,API RESPONSE: 200
+1568395132.8882654,    ,"     Top Terms: [{'shop_id': '21147303'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395133.2279816,    ,API RESPONSE: 200
+1568395133.2600691,    ,"     Top Terms: [{'shop_id': '21145879'}, {'word': 'and', 'count': 200}, {'word': 'svg', 'count': 163}, {'word': 'silhouette', 'count': 151}, {'word': 'for', 'count': 143}, {'word': 'cricut', 'count': 143}]"
+1568395133.547085,    ,API RESPONSE: 200
+1568395133.620636,    ,"     Top Terms: [{'shop_id': '21144837'}, {'word': 'and', 'count': 401}, {'word': 'to', 'count': 400}, {'word': 'for', 'count': 325}, {'word': 'i', 'count': 275}, {'word': 'a', 'count': 250}]"
+1568395133.7494268,    ,API RESPONSE: 200
+1568395133.8205273,    ,"     Top Terms: [{'shop_id': '21143219'}, {'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
+1568395133.9103248,    ,--read
+1568395133.9104042,    ,"[{'shop_id': '21148095'}, {'word': 'to', 'count': 425}, {'word': 'the', 'count': 350}, {'word': 'you', 'count': 300}, {'word': 'and', 'count': 275}, {'word': 'or', 'count': 225}]"
+1568395133.9104617,    ,"[{'shop_id': '21147631'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395133.9105122,    ,"[{'shop_id': '21147421'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395133.9105625,    ,"[{'shop_id': '21147377'}, {'word': 'file/cut', 'count': 50}, {'word': 'file/cricut/cricut/vector', 'count': 50}, {'word': 'logo', 'count': 50}, {'word': 'download/football/t-shirt', 'count': 50}, {'word': 'you', 'count': 25}]"
+1568395133.9106128,    ,"[{'shop_id': '21147303'}, {'word': 'to', 'count': 325}, {'word': 'you', 'count': 300}, {'word': 'for', 'count': 250}, {'word': 'or', 'count': 200}, {'word': 'the', 'count': 200}]"
+1568395133.9106605,    ,"[{'shop_id': '21146975'}, {'word': 'vector', 'count': 100}, {'word': 'svg', 'count': 100}, {'word': 'digital', 'count': 50}, {'word': 'printable', 'count': 50}, {'word': 'cricut', 'count': 50}]"
+1568395133.91071,    ,"[{'shop_id': '21145879'}, {'word': 'and', 'count': 200}, {'word': 'svg', 'count': 163}, {'word': 'silhouette', 'count': 151}, {'word': 'for', 'count': 143}, {'word': 'cricut', 'count': 143}]"
+1568395133.9107575,    ,"[{'shop_id': '21144935'}, {'word': 'files', 'count': 116}, {'word': 'svg', 'count': 100}, {'word': 'floss', 'count': 84}, {'word': 'download', 'count': 78}, {'word': 'to', 'count': 55}]"
+1568395133.9108047,    ,"[{'shop_id': '21144837'}, {'word': 'and', 'count': 401}, {'word': 'to', 'count': 400}, {'word': 'for', 'count': 325}, {'word': 'i', 'count': 275}, {'word': 'a', 'count': 250}]"
+1568395133.910851,    ,"[{'shop_id': '21143219'}, {'word': 'the', 'count': 246}, {'word': 'and', 'count': 185}, {'word': 'of', 'count': 168}, {'word': 'a', 'count': 129}, {'word': 'sample', 'count': 125}]"
+1568395133.9108932,    ,--save
+1568395133.910935,    ,make ./data/distribution_1568395133.csv
