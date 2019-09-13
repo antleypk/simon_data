@@ -1,0 +1,16 @@
+Welcome to the etsy store analyzer v1.1.1
+
+To operate the application, first clone the repo.
+
+After cloning the repo navigate to src folder.
+
+Once in the src folder, execute 'app.sh' -> "you@yourmachine$ ./app.sh"
+
+This will call two python files: 'scraper.py, and analyzer.py'
+
+        scraper.py: builds lists of companies to do anaylsis on. It saves
+    the list in /application/data/shops_epocTimestamp.
+
+        analyzer.py: Finds the distriubtion of words found for a specific shop.
+    It will either get the most recent list of shops, or can also take a timestamp
+    as positional argument $1.  analyzer.py saves the results at application/data/distriubtion_epocTimestamp 

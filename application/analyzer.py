@@ -47,6 +47,7 @@ def get_shops(pv_timestamp, key):
         shop['name'] = "Error, FILE NOT FOUND"
         shop['listings'] = "0"
         shops.append(shop)
+        
     return shops
 def word_counter(shop_id, key):
     #returns a distribution chart of the 5 most common terms related to one shop
