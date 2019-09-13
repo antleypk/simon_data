@@ -73,7 +73,7 @@ def pprint(string):
         os.system("touch ./data/logs.csv")
     with open("./data/logs.csv","a", newline="") as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([str(time.time()), string])
+        writer.writerow([str(time.time()),'    ', string])
 
 def get_key():
     #gets key from .gitignored file

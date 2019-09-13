@@ -58,9 +58,8 @@ def word_counter(shop_id, key):
 
     r = requests.get(url, headers=headers)
     r_status=r.status_code
-    scraper.pprint("r status: {}".format(r_status))
+    scraper.pprint("API RESPONSE: {}".format(r_status))
     if r_status == 200:
-        scraper.pprint('API RESPONSE: {}'.format(r))
         content = r.content
         d_content = content.decode("utf-8")
         content_json = json.loads(d_content)
