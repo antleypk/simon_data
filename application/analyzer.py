@@ -152,6 +152,7 @@ def save(distributions, path):
                 [
                     "id"
                     ,"shop_id"
+                    ,"distribution"
                     ,"e_time"
                 ]
             )
@@ -159,6 +160,7 @@ def save(distributions, path):
             for d in distributions:
                 count_f = {}
                 count_f['count'] = lcl_id
+                d.append(str(time.time()))
                 d.insert(0,count_f)    
                 writer.writerow(d)
                 lcl_id+=1    
