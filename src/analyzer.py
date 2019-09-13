@@ -1,7 +1,7 @@
 import os,csv, requests, json, time
 
 def get_recent_run():
-    print('--get recent run')
+    pprint('--get recent run')
     files = os.listdir("./data")
     dates = []
     for f in files:
@@ -16,11 +16,11 @@ def get_recent_run():
         date = dates[0]
         return date
     except IndexError:
-        print('Data Folder is missing shop lists') 
+        pprint('Data Folder is missing shop lists') 
         return 0
 
 def get_shops(pv_timestamp):
-    print("--get shops, pv_timestamp: {}".format(pv_timestamp))
+    pprint("--get shops, pv_timestamp: {}".format(pv_timestamp))
     lcl_path = "./data/shops_{}.csv".format(pv_timestamp)
     shops = []
     with open(lcl_path, newline='') as csvfile:
@@ -38,15 +38,15 @@ def get_shops(pv_timestamp):
     return shops
 
 def word_counter(shop_id):
-    print("--word counter, shop_id: {}".format(shop_id))
+    pprint("--word counter, shop_id: {}".format(shop_id))
     url = "https://openapi.etsy.com/v2/shops/{}/listings/active?limit=25&offset=0&api_key=bvpvd0ns8aqk63229f9baz9u".format(shop_id)
     headers = {'user-agent': 'my-app/0.0.1'}
 
     r = requests.get(url, headers=headers)
     r_status=r.status_code
-    print("r status: {}".format(r_status))
+    pprint("r status: {}".format(r_status))
     if r_status == 200:
-        print('API RESPONSE: {}'.format(r))
+        pprint('API RESPONSE: {}'.format(r))
         content = r.content
         d_content = content.decode("utf-8")
         content_json = json.loads(d_content)
@@ -92,7 +92,7 @@ def word_counter(shop_id):
                     r_count+=1
             if r_count ==5:
                 break
-        print("     Top Terms: {}".format(return_list))
+        pprint("     Top Terms: {}".format(return_list))
         return return_list
     else:
         return_list = []
@@ -103,18 +103,18 @@ def word_counter(shop_id):
         return return_list
 
 def read(pv_list):
-    print("--read")
+    pprint("--read")
     for item in pv_list:
-        print(item)
+        pprint(item)
     return pv_list
 
 def save(distributions, path):
-    print("--save")
+    pprint("--save")
     s_t = '{}'.format(time.time())
     time_split = s_t.split('.')
     e = time_split[0]
     lcl_path = path+'_{}.csv'.format(e)
-    print('make {}'.format(lcl_path))
+    pprint('make {}'.format(lcl_path))
     with open(lcl_path, "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(
@@ -130,10 +130,20 @@ def save(distributions, path):
                 writer.writerow(lcl_list)
                 lcl_id+=1    
 
+def pprint(string):
+    print(string)
+    if not os.path.isdir("./data"):
+        os.makedirs("./data")
+    if not os.path.isfile("./data/logs.csv"):
+        os.system("touch ./data/logs.csv")
+    with open("./data/logs.csv","a", newline="") as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([str(time.time()), string])
+
 def main():
-    print('--main')
+    pprint('--main, analyzer.py')
     timestamp = get_recent_run()
-    print('timestamp: {}'.format(timestamp))
+    pprint('timestamp: {}'.format(timestamp))
     distributions = []
     save_path = './data/distribution'
     if not timestamp == 0:
@@ -146,6 +156,6 @@ def main():
             distributions.append(lcl)
         save(read(distributions), save_path)
     else:
-        print("Please run 'scraper.py' first.")
+        pprint("Please run 'scraper.py' first.")
 if __name__ == "__main__":
     main()

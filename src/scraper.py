@@ -1,7 +1,7 @@
 import requests, json, csv, os, time
 
 def get_shops(pv_count, pv_listing_count):
-    print("--get shops, pv_count: {}, pv_listing_count {}".format(pv_count, pv_listing_count))
+    pprint("--get shops, pv_count: {}, pv_listing_count {}".format(pv_count, pv_listing_count))
     state = True
     limit = 50
     offset = 0
@@ -10,11 +10,10 @@ def get_shops(pv_count, pv_listing_count):
     stores = []
     store_ids = set()
     while(state):
-        #print('limit: {}, offset: {}'.format(limit, offset))
         url = "https://openapi.etsy.com/v2/shops?limit={}&offset={}&api_key=bvpvd0ns8aqk63229f9baz9u".format(limit, offset)
         headers = {'user-agent': 'my-app/0.0.1'}
         r = requests.get(url, headers=headers)
-        print('---- API response code: {}, Limit: {}, Offset: {}'.format(r, limit, offset))
+        pprint('---- API response code: {}, Limit: {}, Offset: {}'.format(r, limit, offset))
         content = r.content
         d_content = content.decode("utf-8")
         content_json = json.loads(d_content)
@@ -29,26 +28,26 @@ def get_shops(pv_count, pv_listing_count):
                 if not lcl_id in store_ids:
                     count+=1
                     store_ids.add(lcl_id) 
-                    print("Shop ID: {}, Shop Name: {}, Active Listings: {}, Count: {}".format(r['shop_id'], r['shop_name'], r['listing_active_count'], count))
+                    pprint("Shop ID: {}, Shop Name: {}, Active Listings: {}, Count: {}".format(r['shop_id'], r['shop_name'], r['listing_active_count'], count))
                     stores.append(r)
             if len(stores) == pv_count:
                 state = False
                 break
         limit+=increment
         offset+=increment
-        print(' ')
-    print(' ')
+        pprint(' ')
+    pprint(' ')
     return stores    
 
 
 def save(shops, path):
-    print("--save")
+    pprint("--save")
     s_t = '{}'.format(time.time())
     time_split = s_t.split('.')
     e = time_split[0]
     lcl_path = path+'_{}.csv'.format(e)
     if not os.path.isfile(lcl_path):
-        print('make {}'.format(lcl_path))
+        pprint('make {}'.format(lcl_path))
         with open(lcl_path, "w", newline="") as csvfile:
                 writer = csv.writer(csvfile)
                 writer.writerow(
@@ -74,17 +73,17 @@ def pprint(string):
         os.system("touch ./data/logs.csv")
     with open("./data/logs.csv","a", newline="") as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([str(time.time(), string)])
+        writer.writerow([str(time.time()), string])
 
 def main():
-    pprint("--main")
+    pprint("--main 'scraper.py")
     shop_count = 10
     min_active_listing = 25
     save_path = './data/shops'
     shops = get_shops(shop_count,min_active_listing)
     for shop in shops:
-        print('shop: {}'.format(shop['shop_name']))
-    print(' ')
+        pprint('shop: {}'.format(shop['shop_name']))
+    pprint(' ')
     save(shops, save_path)
 
 
