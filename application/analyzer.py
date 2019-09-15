@@ -50,7 +50,7 @@ def get_shops(pv_timestamp, key):
         shop['id'] = 0
         shop['name'] = "Error, FILE NOT FOUND"
         shop['listings'] = "0"
-        shop['key'] = key
+        shop['key'] = "KEY NOT SAVED"
         shops.append(shop)
         
     return shops

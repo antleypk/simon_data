@@ -80,7 +80,6 @@ def get_key():
     print('--get key')
     with open("./secret.key") as f:
         key = f.readline()
-        print("key: '{}'".format(key))
         return key
 
 def main():
